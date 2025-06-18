@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh tra Kiểm tra Thủy sản - Xuất khẩu thủy sản | FDA | EU | HACCP | Trang trại tôm cá</title>
+    <meta name="description" content="Dịch vụ thanh tra kiểm tra thủy sản chuyên nghiệp. Hỗ trợ xuất khẩu thủy sản, kiểm tra trang trại, nhà máy chế biến theo tiêu chuẩn FDA, EU, HACCP.">
+    <meta name="keywords" content="thanh tra thủy sản, kiểm tra trang trại tôm, xuất khẩu thủy sản, FDA, EU, HACCP, chế biến thủy sản">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 40px; width: auto; }
+        .logo-text { font-size: 24px; font-weight: bold; color: #0066cc; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #0066cc; }
+        
+        .breadcrumb { background: #f8f9fa; padding: 100px 0 20px; font-size: 14px; }
+        .breadcrumb a { color: #0066cc; text-decoration: none; }
+        
+        .hero { background: linear-gradient(135deg, #0dcaf0 0%, #0d6efd 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        
+        .main-content { padding: 80px 0; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2rem; color: #0dcaf0; text-align: center; }
+        .text-content { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+        
+        .inspection-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .inspection-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); border-top: 4px solid #0dcaf0; }
+        .inspection-icon { font-size: 3rem; color: #0dcaf0; margin-bottom: 1rem; text-align: center; }
+        .inspection-title { font-size: 1.5rem; margin-bottom: 1rem; color: #333; text-align: center; }
+        .inspection-description { color: #666; margin-bottom: 1.5rem; text-align: center; }
+        .inspection-list { list-style: none; }
+        .inspection-list li { padding: 0.3rem 0; color: #555; position: relative; padding-left: 1.5rem; }
+        .inspection-list li:before { content: "✓"; color: #0dcaf0; font-weight: bold; position: absolute; left: 0; }
+        
+        .standards-section { background: #f8f9fa; padding: 3rem 0; margin: 3rem 0; }
+        .standards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .standard-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .standard-icon { font-size: 2rem; color: #0dcaf0; margin-bottom: 1rem; }
+        
+        .export-markets { margin: 3rem 0; }
+        .markets-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .market-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .market-flag { font-size: 2rem; margin-bottom: 1rem; }
+        
+        .btn { display: inline-block; background: #ff6600; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin: 10px; font-weight: bold; transition: background 0.3s ease; }
+        .btn:hover { background: #e55a00; }
+        
+        footer { background: #333; color: white; padding: 3rem 0 1rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; }
+        .footer-section p, .footer-section a { color: #ccc; text-decoration: none; line-height: 1.6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #555; color: #ccc; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .inspection-areas { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > <a href="services.html#inspection">Thanh tra</a> > Thanh tra Thủy sản
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Thanh tra Kiểm tra Thủy sản</h1>
+            <p>Dịch vụ thanh tra kiểm tra thủy sản chuyên nghiệp. Hỗ trợ xuất khẩu thủy sản an toàn, chất lượng cao theo tiêu chuẩn quốc tế FDA, EU, HACCP.</p>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="text-content">
+                <h2 class="section-title">Các lĩnh vực thanh tra thủy sản</h2>
+                <p>SCI Tech cung cấp dịch vụ thanh tra toàn diện cho ngành thủy sản, từ trang trại nuôi trồng đến nhà máy chế biến, đảm bảo đáp ứng tiêu chuẩn xuất khẩu khắt khe nhất.</p>
+            </div>
+
+            <div class="inspection-areas">
+                <div class="inspection-card">
+                    <div class="inspection-icon">🦐</div>
+                    <h3 class="inspection-title">Trang trại nuôi tôm</h3>
+                    <p class="inspection-description">Thanh tra trang trại nuôi tôm sú, tôm thẻ</p>
+                    <ul class="inspection-list">
+                        <li>Chất lượng nước nuôi</li>
+                        <li>Thức ăn và chất dinh dưỡng</li>
+                        <li>Sử dụng thuốc thú y</li>
+                        <li>Ghi chép nhật ký nuôi</li>
+                        <li>Thu hoạch và bảo quản</li>
+                        <li>Truy xuất nguồn gốc</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🐟</div>
+                    <h3 class="inspection-title">Trang trại nuôi cá</h3>
+                    <p class="inspection-description">Kiểm tra cơ sở nuôi cá tra, cá basa, cá lóc</p>
+                    <ul class="inspection-list">
+                        <li>Môi trường nuôi trồng</li>
+                        <li>Quản lý thức ăn</li>
+                        <li>Kiểm soát dịch bệnh</li>
+                        <li>Chất lượng giống</li>
+                        <li>Vệ sinh ao nuôi</li>
+                        <li>Hồ sơ sản xuất</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🏭</div>
+                    <h3 class="inspection-title">Nhà máy chế biến</h3>
+                    <p class="inspection-description">Thanh tra nhà máy chế biến thủy sản</p>
+                    <ul class="inspection-list">
+                        <li>Hệ thống HACCP</li>
+                        <li>Vệ sinh cơ sở sản xuất</li>
+                        <li>Quy trình chế biến</li>
+                        <li>Kiểm soát nhiệt độ</li>
+                        <li>Bao bì và ghi nhãn</li>
+                        <li>Lưu trữ và vận chuyển</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">❄️</div>
+                    <h3 class="inspection-title">Kho lạnh thủy sản</h3>
+                    <p class="inspection-description">Kiểm tra hệ thống bảo quản lạnh</p>
+                    <ul class="inspection-list">
+                        <li>Nhiệt độ bảo quản</li>
+                        <li>Hệ thống làm lạnh</li>
+                        <li>Vệ sinh kho lạnh</li>
+                        <li>Phân loại sản phẩm</li>
+                        <li>Ghi chép nhiệt độ</li>
+                        <li>Kiểm soát chất lượng</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🚢</div>
+                    <h3 class="inspection-title">Tàu đánh bắt</h3>
+                    <p class="inspection-description">Thanh tra tàu cá và hoạt động đánh bắt</p>
+                    <ul class="inspection-list">
+                        <li>Vệ sinh tàu cá</li>
+                        <li>Bảo quản hải sản</li>
+                        <li>Thiết bị làm lạnh</li>
+                        <li>Nhật ký đánh bắt</li>
+                        <li>Khu vực đánh bắt</li>
+                        <li>Xử lý trên tàu</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🏪</div>
+                    <h3 class="inspection-title">Chợ & Cửa hàng</h3>
+                    <p class="inspection-description">Kiểm tra cơ sở kinh doanh thủy sản</p>
+                    <ul class="inspection-list">
+                        <li>Điều kiện bán hàng</li>
+                        <li>Độ tươi sản phẩm</li>
+                        <li>Nguồn gốc xuất xứ</li>
+                        <li>Vệ sinh môi trường</li>
+                        <li>Bảo quản và trưng bày</li>
+                        <li>Giấy tờ pháp lý</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="standards-section">
+                <div class="container">
+                    <h3 class="section-title">Tiêu chuẩn xuất khẩu</h3>
+                    <div class="standards-grid">
+                        <div class="standard-item">
+                            <div class="standard-icon">🇺🇸</div>
+                            <h4>FDA (Mỹ)</h4>
+                            <p>Tiêu chuẩn an toàn thực phẩm của Mỹ</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🇪🇺</div>
+                            <h4>EU Standards</h4>
+                            <p>Quy định của Liên minh Châu Âu</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🇯🇵</div>
+                            <h4>JAS (Nhật Bản)</h4>
+                            <p>Tiêu chuẩn nông nghiệp Nhật Bản</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🇰🇷</div>
+                            <h4>K-FOOD (Hàn Quốc)</h4>
+                            <p>Tiêu chuẩn thực phẩm Hàn Quốc</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🇨🇦</div>
+                            <h4>CFIA (Canada)</h4>
+                            <p>Cơ quan kiểm tra thực phẩm Canada</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🇦🇺</div>
+                            <h4>AQIS (Úc)</h4>
+                            <p>Dịch vụ kiểm dịch Úc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="export-markets">
+                <h3 class="section-title">Thị trường xuất khẩu chính</h3>
+                <div class="markets-grid">
+                    <div class="market-item">
+                        <div class="market-flag">🇺🇸</div>
+                        <h4>Hoa Kỳ</h4>
+                        <p>1.5 tỷ USD<br/>Tôm, cá tra</p>
+                    </div>
+                    <div class="market-item">
+                        <div class="market-flag">🇪🇺</div>
+                        <h4>Liên minh Châu Âu</h4>
+                        <p>1.2 tỷ USD<br/>Tôm, cá tra</p>
+                    </div>
+                    <div class="market-item">
+                        <div class="market-flag">🇯🇵</div>
+                        <h4>Nhật Bản</h4>
+                        <p>800 triệu USD<br/>Tôm, cua, mực</p>
+                    </div>
+                    <div class="market-item">
+                        <div class="market-flag">🇰🇷</div>
+                        <h4>Hàn Quốc</h4>
+                        <p>600 triệu USD<br/>Tôm, cá ngừ</p>
+                    </div>
+                    <div class="market-item">
+                        <div class="market-flag">🇨🇳</div>
+                        <h4>Trung Quốc</h4>
+                        <p>2.1 tỷ USD<br/>Tôm, cá tra</p>
+                    </div>
+                    <div class="market-item">
+                        <div class="market-flag">🇦🇺</div>
+                        <h4>Úc</h4>
+                        <p>300 triệu USD<br/>Tôm, cá tra</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3>Cần dịch vụ thanh tra thủy sản?</h3>
+                <p style="margin: 1rem 0;">Liên hệ ngay để hỗ trợ xuất khẩu thủy sản an toàn, chất lượng</p>
+                <a href="contact.html" class="btn">Liên hệ ngay</a>
+                <a href="tel:0931004818" class="btn">Gọi: 0931.004.818</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Đối tác tin cậy trong việc thanh tra kiểm tra thủy sản, hỗ trợ xuất khẩu thành công.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

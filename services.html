@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ - SCI Tech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #0066cc;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #0066cc;
+        }
+
+        .service-category {
+            margin-bottom: 5rem;
+            padding-top: 2rem;
+            position: relative;
+            padding: 3rem 0;
+        }
+
+        .service-category:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: #333;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+            border: none;
+        }
+
+        .category-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #0066cc, #ff6600);
+        }
+
+        .service-category:hover .category-title:after {
+            transform: scaleX(1);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 3px solid #0066cc;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #0066cc, #ff6600);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover:before {
+            transform: translateX(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,102,204,0.2);
+            border-top-color: #ff6600;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-left: 10px;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #555;
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .service-features li:before {
+            content: "•";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .service-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .service-link:hover {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-top: auto;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #e55500;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* CTA Section */
+        .cta {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #0066cc;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #0066cc;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 1rem;
+            text-align: center;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            .service-features {
+                min-height: 200px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .service-features {
+                min-height: 220px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .service-features {
+                min-height: auto;
+                margin-bottom: 1rem;
+            }
+            
+            .service-category {
+                padding: 2rem 0;
+            }
+            
+            .category-title {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+            
+            .service-icon {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                margin: 0 auto;
+                max-width: 350px;
+            }
+        }
+
+        /* Scroll Padding for Anchor Links */
+        :target {
+            scroll-margin-top: 100px;
+        }
+
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1320px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <span class="logo-text">SCI Tech</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html" class="active">Dịch vụ</a></li>
+                <li><a href="about.html">Về chúng tôi</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Dịch vụ của chúng tôi</h1>
+            <p>Chúng tôi cung cấp đa dạng các dịch vụ kiểm nghiệm, chứng nhận và tư vấn môi trường với tiêu chuẩn quốc tế cao nhất</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <!-- Testing Services -->
+            <div class="service-category" id="testing">
+                <h3 class="category-title">🔬 Dịch vụ Kiểm nghiệm - MekongLAB</h3>
+                <p style="text-align: center; margin-bottom: 2rem; color: #666; font-style: italic;">
+                    Trung tâm kiểm nghiệm MekongLAB đã đạt chuẩn ISO/IEC 17025 và được chỉ định của Bộ Nông nghiệp và PTNT, Bộ KHCN, Bộ Công Thương, Bộ Y Tế, Bộ Tài Nguyên và Môi Trường
+                </p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🍎</div>
+                        <h4 class="service-title">Kiểm nghiệm Thực phẩm</h4>
+                        <p class="service-description">Kiểm nghiệm các chỉ tiêu hóa học và vi sinh trên thực phẩm theo tiêu chuẩn quốc tế</p>
+                        <ul class="service-features">
+                            <li>Phân tích vi sinh vật (E.coli, Salmonella, Listeria...)</li>
+                            <li>Kiểm tra chất bảo quản và phụ gia</li>
+                            <li>Phân tích kim loại nặng (Pb, Cd, Hg, As...)</li>
+                            <li>Dư lượng thuốc bảo vệ thực vật</li>
+                            <li>Thành phần dinh dưỡng</li>
+                            <li>Chất cấm trong thực phẩm</li>
+                        </ul>
+                        <a href="testing-food.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🐟</div>
+                        <h4 class="service-title">Kiểm nghiệm Thủy sản</h4>
+                        <p class="service-description">Phân tích chất lượng và an toàn thủy sản tươi sống và chế biến</p>
+                        <ul class="service-features">
+                            <li>Vi sinh vật gây bệnh</li>
+                            <li>Kháng sinh và hóa chất cấm</li>
+                            <li>Kim loại nặng</li>
+                            <li>Độ tươi (TVB-N, Histamine)</li>
+                            <li>Chất lượng nước nuôi</li>
+                            <li>Sulfite trong tôm đông lạnh</li>
+                        </ul>
+                        <a href="testing-seafood.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌾</div>
+                        <h4 class="service-title">Kiểm nghiệm Nông sản</h4>
+                        <p class="service-description">Đánh giá chất lượng nông sản từ nguyên liệu thô đến sản phẩm chế biến</p>
+                        <ul class="service-features">
+                            <li>Dư lượng thuốc bảo vệ thực vật</li>
+                            <li>Độ ẩm, tạp chất</li>
+                            <li>Aflatoxin và mycotoxin</li>
+                            <li>Kim loại nặng</li>
+                            <li>Chất lượng hạt (protein, tinh bột...)</li>
+                            <li>GMO (biến đổi gen)</li>
+                        </ul>
+                        <a href="testing-agriculture.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🐄</div>
+                        <h4 class="service-title">Thức ăn Chăn nuôi & Thủy sản</h4>
+                        <p class="service-description">Kiểm nghiệm thức ăn chăn nuôi và thức ăn thủy sản đảm bảo chất lượng</p>
+                        <ul class="service-features">
+                            <li>Thành phần dinh dưỡng (protein, lipid, xơ...)</li>
+                            <li>Mycotoxin (Aflatoxin, DON, ZEA...)</li>
+                            <li>Vi sinh vật (Salmonella, E.coli...)</li>
+                            <li>Kháng sinh và chất cấm</li>
+                            <li>Kim loại nặng</li>
+                            <li>Chất phụ gia thức ăn</li>
+                        </ul>
+                        <a href="testing-feed.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌱</div>
+                        <h4 class="service-title">Kiểm nghiệm Phân bón</h4>
+                        <p class="service-description">Phân tích thành phần và chất lượng các loại phân bón</p>
+                        <ul class="service-features">
+                            <li>Thành phần dinh dưỡng (N, P, K)</li>
+                            <li>Vi lượng (Fe, Mn, Zn, Cu, B, Mo...)</li>
+                            <li>Kim loại nặng</li>
+                            <li>Độ ẩm, pH</li>
+                            <li>Chất hữu cơ</li>
+                            <li>Vi sinh vật có hại</li>
+                        </ul>
+                        <a href="testing-fertilizer.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌍</div>
+                        <h4 class="service-title">Kiểm nghiệm Môi trường</h4>
+                        <p class="service-description">Phân tích chất lượng môi trường đất, nước, không khí</p>
+                        <ul class="service-features">
+                            <li>Nước thải, nước mặt, nước ngầm</li>
+                            <li>Không khí xung quanh, khí thải</li>
+                            <li>Đất nông nghiệp, đất ô nhiễm</li>
+                            <li>Tiếng ồn, độ rung</li>
+                            <li>Chất thải rắn</li>
+                            <li>Bụi lắng, bụi tổng</li>
+                        </ul>
+                        <a href="testing-environment.html" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certification Services -->
+            <div class="service-category" id="certification">
+                <h3 class="category-title">🏆 Dịch vụ Chứng nhận các Tiêu chuẩn</h3>
+                <div class="services-grid">
+                    <!-- ISO Standards -->
+                    <div class="service-card">
+                        <div class="service-icon">🏢</div>
+                        <h4 class="service-title">Chứng nhận ISO</h4>
+                        <p class="service-description">Chứng nhận các tiêu chuẩn ISO về quản lý chất lượng, môi trường và an toàn thông tin</p>
+                        <ul class="service-features">
+                            <li>ISO 9001 - Hệ thống quản lý chất lượng</li>
+                            <li>ISO 14001 - Hệ thống quản lý môi trường</li>
+                            <li>ISO 22000 - An toàn thực phẩm</li>
+                            <li>ISO 14064-1, ISO 14064-2 - Khí nhà kính</li>
+                            <li>IEC.ISO27001 - An toàn thông tin</li>
+                        </ul>
+                        <a href="certification-iso.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <!-- Food Safety Standards -->
+                    <div class="service-card">
+                        <div class="service-icon">🛡️</div>
+                        <h4 class="service-title">Chứng nhận An toàn Thực phẩm</h4>
+                        <p class="service-description">Các tiêu chuẩn về an toàn và chất lượng thực phẩm</p>
+                        <ul class="service-features">
+                            <li>HACCP - Phân tích mối nguy và điểm kiểm soát tới hạn</li>
+                            <li>GMP - Thực hành sản xuất tốt</li>
+                            <li>Halal - Tiêu chuẩn Halal</li>
+                            <li>Kosher - Tiêu chuẩn Kosher</li>
+                            <li>BRC, IFS - Tiêu chuẩn quốc tế</li>
+                        </ul>
+                        <a href="certification-haccp.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <!-- Organic Standards -->
+                    <div class="service-card">
+                        <div class="service-icon">🌱</div>
+                        <h4 class="service-title">Chứng nhận Hữu cơ (Organic)</h4>
+                        <p class="service-description">Chứng nhận sản phẩm hữu cơ theo các tiêu chuẩn quốc tế</p>
+                        <ul class="service-features">
+                            <li>Hữu cơ Mỹ (NOP) - USDA Organic</li>
+                            <li>Hữu cơ Châu Âu (EU Organic)</li>
+                            <li>Hữu cơ Nhật (JAS Organic)</li>
+                            <li>Hữu cơ Canada (COR)</li>
+                            <li>IFOAM - Liên đoàn Phong trào Nông nghiệp Hữu cơ Thế giới</li>
+                            <li>Hữu cơ Việt Nam</li>
+                        </ul>
+                        <a href="certification-organic.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <!-- GAP Standards -->
+                    <div class="service-card">
+                        <div class="service-icon">🌾</div>
+                        <h4 class="service-title">Chứng nhận GAP</h4>
+                        <p class="service-description">Thực hành nông nghiệp tốt cho trồng trọt, chăn nuôi và thủy sản</p>
+                        <ul class="service-features">
+                            <li>Global GAP - Tiêu chuẩn toàn cầu</li>
+                            <li>VietGAP Trồng trọt</li>
+                            <li>VietGAP Chăn nuôi</li>
+                            <li>VietGAP Thủy sản</li>
+                            <li>ASC - Hội đồng Nuôi trồng Thủy sản</li>
+                            <li>BAP - Thực hành Nuôi trồng Thủy sản Tốt nhất</li>
+                        </ul>
+                        <a href="certification-gap.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <!-- Sustainability Standards -->
+                    <div class="service-card">
+                        <div class="service-icon">🤝</div>
+                        <h4 class="service-title">Chứng nhận Phát triển Bền vững</h4>
+                        <p class="service-description">Các tiêu chuẩn về trách nhiệm xã hội và phát triển bền vững</p>
+                        <ul class="service-features">
+                            <li>SMETA SEDEX - Kiểm toán thương mại có đạo đức</li>
+                            <li>SA8000 - Trách nhiệm xã hội</li>
+                            <li>Rainforest Alliance</li>
+                            <li>Fairtrade - Thương mại công bằng</li>
+                            <li>UTZ Certified</li>
+                        </ul>
+                        <a href="certification-sustainability.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <!-- Custom Standards -->
+                    <div class="service-card">
+                        <div class="service-icon">⚙️</div>
+                        <h4 class="service-title">Tiêu chuẩn Khách hàng</h4>
+                        <p class="service-description">Chứng nhận theo yêu cầu và tiêu chuẩn riêng của khách hàng</p>
+                        <ul class="service-features">
+                            <li>Tiêu chuẩn doanh nghiệp</li>
+                            <li>Tiêu chuẩn chuỗi cung ứng</li>
+                            <li>Tiêu chuẩn đối tác thương mại</li>
+                            <li>Quy chuẩn nội bộ</li>
+                            <li>Tiêu chuẩn xuất khẩu đặc biệt</li>
+                        </ul>
+                        <a href="certification-custom.html" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inspection Services -->
+            <div class="service-category" id="inspection">
+                <h3 class="category-title">🔍 Dịch vụ Giám định</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🍎</div>
+                        <h4 class="service-title">Giám định Thực phẩm</h4>
+                        <p class="service-description">Giám định chất lượng và an toàn thực phẩm theo quy chuẩn</p>
+                        <ul class="service-features">
+                            <li>Giám định thực phẩm tươi sống</li>
+                            <li>Giám định thực phẩm chế biến</li>
+                            <li>Giám định thực phẩm xuất nhập khẩu</li>
+                            <li>Đánh giá điều kiện bảo quản</li>
+                            <li>Xác nhận nguồn gốc xuất xứ</li>
+                        </ul>
+                        <a href="inspection-food.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🐟</div>
+                        <h4 class="service-title">Giám định Thủy sản</h4>
+                        <p class="service-description">Giám định chất lượng thủy sản tươi sống và đông lạnh</p>
+                        <ul class="service-features">
+                            <li>Giám định tôm, cá, mực tươi</li>
+                            <li>Giám định thủy sản đông lạnh</li>
+                            <li>Đánh giá độ tươi và chất lượng</li>
+                            <li>Kiểm tra điều kiện vận chuyển</li>
+                            <li>Giám định thủy sản xuất khẩu</li>
+                        </ul>
+                        <a href="inspection-seafood.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌾</div>
+                        <h4 class="service-title">Giám định Nông sản</h4>
+                        <p class="service-description">Giám định chất lượng nông sản và sản phẩm nông nghiệp</p>
+                        <ul class="service-features">
+                            <li>Giám định gạo, ngô, đậu tương</li>
+                            <li>Giám định rau củ quả tươi</li>
+                            <li>Đánh giá chất lượng hạt</li>
+                            <li>Kiểm tra độ ẩm, tạp chất</li>
+                            <li>Giám định nông sản xuất khẩu</li>
+                        </ul>
+                        <a href="inspection-agriculture.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🐄</div>
+                        <h4 class="service-title">Giám định Nguyên liệu Thức ăn Chăn nuôi</h4>
+                        <p class="service-description">Giám định chất lượng nguyên liệu và thức ăn chăn nuôi</p>
+                        <ul class="service-features">
+                            <li>Giám định bột cá, bột đậu tương</li>
+                            <li>Giám định ngô, lúa mì thức ăn</li>
+                            <li>Đánh giá thành phần dinh dưỡng</li>
+                            <li>Kiểm tra chất lượng nguyên liệu</li>
+                            <li>Giám định thức ăn hoàn chỉnh</li>
+                        </ul>
+                        <a href="inspection-feed.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌱</div>
+                        <h4 class="service-title">Giám định Phân bón</h4>
+                        <p class="service-description">Giám định chất lượng và thành phần phân bón</p>
+                        <ul class="service-features">
+                            <li>Giám định phân NPK</li>
+                            <li>Giám định phân hữu cơ</li>
+                            <li>Đánh giá hàm lượng dinh dưỡng</li>
+                            <li>Kiểm tra độ ẩm, tạp chất</li>
+                            <li>Giám định phân bón nhập khẩu</li>
+                        </ul>
+                        <a href="inspection-fertilizer.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🛃</div>
+                        <h4 class="service-title">Kiểm tra Nhà nước về Hàng nhập khẩu</h4>
+                        <p class="service-description">Dịch vụ kiểm tra nhà nước theo ủy quyền của các Bộ</p>
+                        <ul class="service-features">
+                            <li>Kiểm tra thực phẩm nhập khẩu</li>
+                            <li>Kiểm tra nguyên liệu thức ăn chăn nuôi</li>
+                            <li>Kiểm tra thức ăn thủy sản nhập khẩu</li>
+                            <li>Cấp Giấy chứng nhận kiểm tra</li>
+                            <li>Báo cáo kết quả cho cơ quan quản lý</li>
+                        </ul>
+                        <a href="inspection-import.html" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compliance Certification Services -->
+            <div class="service-category" id="compliance">
+                <h3 class="category-title">✅ Dịch vụ Chứng nhận Hợp quy</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🐄</div>
+                        <h4 class="service-title">Chứng nhận Hợp quy Thức ăn Chăn nuôi</h4>
+                        <p class="service-description">Chứng nhận hợp quy cho các sản phẩm thức ăn chăn nuôi</p>
+                        <ul class="service-features">
+                            <li>Thức ăn hoàn chỉnh cho gia súc</li>
+                            <li>Thức ăn hoàn chỉnh cho gia cầm</li>
+                            <li>Thức ăn bổ sung (premix)</li>
+                            <li>Nguyên liệu thức ăn chăn nuôi</li>
+                            <li>Phụ gia thức ăn chăn nuôi</li>
+                        </ul>
+                        <a href="compliance-feed.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🐟</div>
+                        <h4 class="service-title">Chứng nhận Hợp quy Thức ăn Thủy sản</h4>
+                        <p class="service-description">Chứng nhận hợp quy cho các sản phẩm thức ăn thủy sản</p>
+                        <ul class="service-features">
+                            <li>Thức ăn cho cá nước ngọt</li>
+                            <li>Thức ăn cho tôm</li>
+                            <li>Thức ăn cho cá biển</li>
+                            <li>Thức ăn cho cá cảnh</li>
+                            <li>Thức ăn bổ sung cho thủy sản</li>
+                        </ul>
+                        <a href="compliance-seafood.html" class="btn">Xem chi tiết</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌊</div>
+                        <h4 class="service-title">Chứng nhận Xử lý Môi trường Nuôi trồng Thủy sản</h4>
+                        <p class="service-description">Chứng nhận các sản phẩm xử lý môi trường ao nuôi</p>
+                        <ul class="service-features">
+                            <li>Chế phẩm xử lý nước ao nuôi</li>
+                            <li>Vi sinh vật có lợi</li>
+                            <li>Chế phẩm khử độc</li>
+                            <li>Sản phẩm cải tạo đáy ao</li>
+                            <li>Chế phẩm tăng oxy</li>
+                        </ul>
+                        <a href="compliance-aquaculture.html" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Cần tư vấn về dịch vụ?</h2>
+            <p>Đội ngũ chuyên gia của chúng tôi sẵn sàng hỗ trợ bạn tìm ra giải pháp phù hợp nhất cho nhu cầu kiểm nghiệm và chứng nhận</p>
+            <a href="contact.html" class="btn">Liên hệ ngay</a>
+            <a href="about.html" class="btn" style="background: #0066cc;">Tìm hiểu về chúng tôi</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-container">
+                        <img src="logo.png" alt="SCI Tech Logo" class="logo-img" style="filter: brightness(0) invert(1);">
+                        <span style="color: #0066cc; font-size: 20px; font-weight: bold;">SCI Tech</span>
+                    </div>
+                    <p style="margin-top: 1rem;">Đối tác tin cậy trong lĩnh vực kiểm nghiệm, chứng nhận và tư vấn môi trường</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Dịch vụ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#testing">Kiểm nghiệm</a></li>
+                        <li><a href="#certification">Chứng nhận</a></li>
+                        <li><a href="#inspection">Giám định</a></li>
+                        <li><a href="#compliance">Hợp quy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Công ty</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P. Tây Thạnh, Q. Tân Phú, TP.HCM</p>
+                    <p>📞 0931.004.818</p>
+                    <p>📧 info@sci-techvn.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

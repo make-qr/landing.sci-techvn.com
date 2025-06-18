@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ Kiểm nghiệm - MekongLAB | ISO/IEC 17025 Certified Testing Laboratory</title>
+    <meta name="description" content="MekongLAB - Phòng thí nghiệm kiểm nghiệm được chỉ định bởi các Bộ, ngành. Cung cấp dịch vụ kiểm nghiệm thực phẩm, thủy sản, nông sản, thức ăn chăn nuôi, phân bón, môi trường theo tiêu chuẩn ISO/IEC 17025.">
+    <meta name="keywords" content="kiểm nghiệm thực phẩm, kiểm nghiệm thủy sản, kiểm nghiệm nông sản, phòng thí nghiệm ISO 17025, MekongLAB, kiểm nghiệm hóa học, kiểm nghiệm vi sinh, kiểm nghiệm môi trường">
+    <link rel="canonical" href="https://landing.sci-techvn.com/testing-services.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f8f9fa;
+            padding: 100px 0 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6600;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #0066cc;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Testing Categories */
+        .testing-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .category-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #0066cc;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,102,204,0.2);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .category-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-features {
+            list-style: none;
+        }
+
+        .category-features li {
+            padding: 0.3rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .category-features li:before {
+            content: "✓";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .btn-detail {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-detail:hover {
+            background: #004499;
+        }
+
+        /* Accreditation Section */
+        .accreditation {
+            background: #f8f9fa;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .accreditation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .accreditation-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .accreditation-logo {
+            font-size: 2rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            background: #0066cc;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .step-description {
+            color: #666;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 4rem 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-question:after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            font-size: 1.5rem;
+            color: #0066cc;
+        }
+
+        .faq-question.active:after {
+            content: "-";
+        }
+
+        .faq-answer {
+            padding: 0 0 1rem 0;
+            color: #666;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e55a00;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0066cc;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #0066cc;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .testing-categories,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > Dịch vụ Kiểm nghiệm
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Dịch vụ Kiểm nghiệm MekongLAB</h1>
+            <p>Phòng thí nghiệm được chứng nhận ISO/IEC 17025 và chỉ định bởi các Bộ, ngành. Cung cấp dịch vụ kiểm nghiệm hóa học và vi sinh vật chuyên nghiệp, chính xác và đáng tin cậy.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">2500+</div>
+                    <div class="stat-label">Chỉ tiêu kiểm nghiệm</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Lĩnh vực chuyên môn</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">ISO 17025</div>
+                    <div class="stat-label">Chứng nhận quốc tế</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="content-section">
+                <h2 class="section-title">MekongLAB - Đối tác tin cậy trong kiểm nghiệm</h2>
+                <div class="text-content">
+                    <p><strong>MekongLAB</strong> là phòng thí nghiệm kiểm nghiệm hàng đầu tại Việt Nam, được chứng nhận theo tiêu chuẩn quốc tế <strong>ISO/IEC 17025:2017</strong> và được chỉ định bởi nhiều Bộ, ngành làm đơn vị kiểm nghiệm chính thức.</p>
+                    
+                    <p>Với hơn 15 năm kinh nghiệm, chúng tôi cung cấp dịch vụ kiểm nghiệm toàn diện cho các lĩnh vực: thực phẩm, thủy sản, nông sản, thức ăn chăn nuôi, thức ăn thủy sản, phân bón và môi trường. Tất cả các kết quả kiểm nghiệm của MekongLAB đều có giá trị pháp lý và được công nhận rộng rãi.</p>
+                </div>
+            </div>
+
+            <!-- Testing Categories -->
+            <div class="content-section">
+                <h2 class="section-subtitle">Các lĩnh vực kiểm nghiệm chuyên sâu</h2>
+                <div class="testing-categories">
+                    <div class="category-card">
+                        <div class="category-icon">🍎</div>
+                        <h3 class="category-title">Kiểm nghiệm Thực phẩm</h3>
+                        <p class="category-description">Phân tích vi sinh, hóa học, dinh dưỡng, dư lượng thuốc BVTV, kim loại nặng trong thực phẩm.</p>
+                        <a href="testing-food.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🦐</div>
+                        <h3 class="category-title">Kiểm nghiệm Thủy sản</h3>
+                        <p class="category-description">Phân tích vi sinh, kháng sinh, kim loại nặng, chất lượng thủy sản xuất khẩu và nội địa.</p>
+                        <a href="testing-seafood.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🌾</div>
+                        <h3 class="category-title">Kiểm nghiệm Nông sản</h3>
+                        <p class="category-description">Phân tích dư lượng thuốc BVTV, vi sinh vật, độc tố nấm mốc, kim loại nặng trong nông sản.</p>
+                        <a href="testing-agriculture.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🌱</div>
+                        <h3 class="category-title">Kiểm nghiệm Phân bón</h3>
+                        <p class="category-description">Phân tích hàm lượng NPK, vi lượng, kim loại nặng, chất lượng phân bón các loại.</p>
+                        <a href="testing-fertilizer.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🐄</div>
+                        <h3 class="category-title">Kiểm nghiệm Thức ăn chăn nuôi</h3>
+                        <p class="category-description">Phân tích dinh dưỡng, vi sinh, độc tố, kháng sinh trong thức ăn chăn nuôi.</p>
+                        <a href="testing-feed.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🌊</div>
+                        <h3 class="category-title">Kiểm nghiệm Môi trường</h3>
+                        <p class="category-description">Phân tích nước thải, không khí, đất, chất thải theo các quy chuẩn môi trường.</p>
+                        <a href="testing-environment.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accreditation -->
+            <div class="content-section">
+                <div class="accreditation">
+                    <h2 class="section-title">Chứng nhận và Chỉ định</h2>
+                    <p class="text-content">MekongLAB được công nhận bởi các tổ chức uy tín trong và ngoài nước</p>
+                    
+                    <div class="accreditation-grid">
+                        <div class="accreditation-item">
+                            <div class="accreditation-logo">🏆</div>
+                            <h4>ISO/IEC 17025:2017</h4>
+                            <p>Chứng nhận năng lực phòng thí nghiệm kiểm nghiệm và hiệu chuẩn</p>
+                        </div>
+                        <div class="accreditation-item">
+                            <div class="accreditation-logo">🏛️</div>
+                            <h4>Bộ Y tế</h4>
+                            <p>Chỉ định kiểm nghiệm thực phẩm, mỹ phẩm và vật tư y tế</p>
+                        </div>
+                        <div class="accreditation-item">
+                            <div class="accreditation-logo">🌾</div>
+                            <h4>Bộ NN&PTNT</h4>
+                            <p>Chỉ định kiểm nghiệm nông sản, thủy sản, thức ăn chăn nuôi</p>
+                        </div>
+                        <div class="accreditation-item">
+                            <div class="accreditation-logo">🏭</div>
+                            <h4>Bộ Công Thương</h4>
+                            <p>Chỉ định kiểm nghiệm hàng hóa xuất nhập khẩu</p>
+                        </div>
+                        <div class="accreditation-item">
+                            <div class="accreditation-logo">🌍</div>
+                            <h4>Bộ TN&MT</h4>
+                            <p>Chỉ định quan trắc môi trường và chất thải</p>
+                        </div>
+                        <div class="accreditation-item">
+                            <div class="accreditation-logo">🔬</div>
+                            <h4>VILAS</h4>
+                            <p>Công nhận năng lực kỹ thuật phòng thí nghiệm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process -->
+            <div class="content-section">
+                <h2 class="section-subtitle">Quy trình kiểm nghiệm chuyên nghiệp</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4 class="step-title">Tiếp nhận mẫu</h4>
+                        <p class="step-description">Tiếp nhận và kiểm tra mẫu theo quy trình chuẩn, đảm bảo tính toàn vẹn</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4 class="step-title">Chuẩn bị mẫu</h4>
+                        <p class="step-description">Xử lý và chuẩn bị mẫu theo phương pháp tiêu chuẩn quốc tế</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4 class="step-title">Phân tích</h4>
+                        <p class="step-description">Thực hiện phân tích bằng thiết bị hiện đại và phương pháp chuẩn</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4 class="step-title">Kiểm soát chất lượng</h4>
+                        <p class="step-description">Kiểm tra và đánh giá kết quả theo hệ thống quản lý chất lượng</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4 class="step-title">Báo cáo</h4>
+                        <p class="step-description">Xuất báo cáo kết quả có giá trị pháp lý và gửi đến khách hàng</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="content-section">
+                <div class="faq-section">
+                    <h2 class="section-subtitle">Câu hỏi thường gặp</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">Thời gian trả kết quả kiểm nghiệm là bao lâu?</button>
+                        <div class="faq-answer">
+                            <p>Thời gian trả kết quả phụ thuộc vào loại mẫu và chỉ tiêu kiểm nghiệm:</p>
+                            <ul>
+                                <li>Kiểm nghiệm hóa học: 3-7 ngày làm việc</li>
+                                <li>Kiểm nghiệm vi sinh: 5-10 ngày làm việc</li>
+                                <li>Kiểm nghiệm đặc biệt: 7-15 ngày làm việc</li>
+                            </ul>
+                            <p>Chúng tôi có dịch vụ khẩn cấp với phụ phí để rút ngắn thời gian khi cần thiết.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Kết quả kiểm nghiệm có giá trị pháp lý không?</button>
+                        <div class="faq-answer">
+                            <p>Có, tất cả kết quả kiểm nghiệm của MekongLAB đều có giá trị pháp lý vì:</p>
+                            <ul>
+                                <li>Được chứng nhận ISO/IEC 17025:2017</li>
+                                <li>Được các Bộ, ngành chỉ định chính thức</li>
+                                <li>Sử dụng phương pháp tiêu chuẩn quốc gia và quốc tế</li>
+                                <li>Có đầy đủ chữ ký, con dấu theo quy định</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Cách thức gửi mẫu và thanh toán như thế nào?</button>
+                        <div class="faq-answer">
+                            <p><strong>Gửi mẫu:</strong></p>
+                            <ul>
+                                <li>Trực tiếp tại phòng thí nghiệm</li>
+                                <li>Qua dịch vụ chuyển phát nhanh</li>
+                                <li>Nhân viên đến lấy mẫu tại địa điểm (có phụ phí)</li>
+                            </ul>
+                            <p><strong>Thanh toán:</strong></p>
+                            <ul>
+                                <li>Tiền mặt</li>
+                                <li>Chuyển khoản ngân hàng</li>
+                                <li>Hóa đơn công ty (có hợp đồng)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">MekongLAB có thể kiểm nghiệm mẫu xuất khẩu không?</button>
+                        <div class="faq-answer">
+                            <p>Có, MekongLAB chuyên kiểm nghiệm mẫu xuất khẩu với:</p>
+                            <ul>
+                                <li>Đầy đủ chỉ tiêu theo yêu cầu của nước nhập khẩu</li>
+                                <li>Báo cáo bằng tiếng Anh</li>
+                                <li>Phương pháp được quốc tế công nhận</li>
+                                <li>Hỗ trợ tư vấn quy định kỹ thuật xuất khẩu</li>
+                                <li>Dịch vụ lấy mẫu tại cảng/kho hàng</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Chi phí kiểm nghiệm được tính như thế nào?</button>
+                        <div class="faq-answer">
+                            <p>Chi phí kiểm nghiệm phụ thuộc vào:</p>
+                            <ul>
+                                <li>Loại mẫu và ma trận mẫu</li>
+                                <li>Số lượng chỉ tiêu cần kiểm nghiệm</li>
+                                <li>Phương pháp phân tích</li>
+                                <li>Thời gian trả kết quả</li>
+                                <li>Dịch vụ bổ sung (lấy mẫu, tư vấn...)</li>
+                            </ul>
+                            <p>Vui lòng liên hệ để nhận báo giá chi tiết và chính xác nhất.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Sẵn sàng kiểm nghiệm mẫu của bạn?</h2>
+            <p class="cta-description">Liên hệ ngay với MekongLAB để nhận tư vấn miễn phí và báo giá chi tiết cho nhu cầu kiểm nghiệm của bạn</p>
+            <a href="contact.html" class="btn">Liên hệ ngay</a>
+            <a href="tel:0931004818" class="btn btn-outline">Gọi: 0931.004.818</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Công ty hàng đầu về dịch vụ kiểm nghiệm, chứng nhận và giám định tại Việt Nam.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Dịch vụ</h3>
+                    <p><a href="testing-services.html">Dịch vụ Kiểm nghiệm</a></p>
+                    <p><a href="certification-services.html">Dịch vụ Chứng nhận</a></p>
+                    <p><a href="inspection-services.html">Dịch vụ Kiểm tra</a></p>
+                    <p><a href="compliance-services.html">Chứng nhận Hợp chuẩn</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">YouTube</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

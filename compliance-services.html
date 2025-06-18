@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chứng nhận Hợp chuẩn | Thức ăn Chăn nuôi | Thức ăn Thủy sản | Môi trường Nuôi trồng</title>
+    <meta name="description" content="Dịch vụ chứng nhận hợp chuẩn chuyên nghiệp: thức ăn chăn nuôi, thức ăn thủy sản, chất cải tạo môi trường nuôi trồng thủy sản. Quy trình nhanh chóng, chi phí hợp lý, đảm bảo tuân thủ quy định pháp luật.">
+    <meta name="keywords" content="chứng nhận hợp chuẩn, thức ăn chăn nuôi, thức ăn thủy sản, môi trường nuôi trồng thủy sản, chất cải tạo môi trường, quy chuẩn kỹ thuật">
+    <link rel="canonical" href="https://landing.sci-techvn.com/compliance-services.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f8f9fa;
+            padding: 100px 0 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6600;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #0066cc;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Compliance Categories */
+        .compliance-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .compliance-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #0066cc;
+            transition: transform 0.3s ease;
+        }
+
+        .compliance-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,102,204,0.2);
+        }
+
+        .compliance-icon {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        .compliance-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .compliance-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .compliance-features {
+            list-style: none;
+        }
+
+        .compliance-features li {
+            padding: 0.3rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .compliance-features li:before {
+            content: "✓";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Regulations Section */
+        .regulations {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .regulations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .regulation-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .regulation-icon {
+            font-size: 2rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            background: #0066cc;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .step-description {
+            color: #666;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 4rem 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-question:after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            font-size: 1.5rem;
+            color: #0066cc;
+        }
+
+        .faq-question.active:after {
+            content: "-";
+        }
+
+        .faq-answer {
+            padding: 0 0 1rem 0;
+            color: #666;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e55a00;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0066cc;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #0066cc;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .compliance-categories,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > Chứng nhận Hợp chuẩn
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Chứng nhận Hợp chuẩn Chuyên nghiệp</h1>
+            <p>Cung cấp dịch vụ chứng nhận hợp chuẩn toàn diện cho thức ăn chăn nuôi, thức ăn thủy sản và chất cải tạo môi trường nuôi trồng thủy sản. Đảm bảo tuân thủ quy định pháp luật Việt Nam.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Sản phẩm đã chứng nhận</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Lĩnh vực chuyên môn</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Tuân thủ quy định</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="content-section">
+                <h2 class="section-title">Đối tác tin cậy trong chứng nhận hợp chuẩn</h2>
+                <div class="text-content">
+                    <p><strong>SCI Tech Vietnam</strong> là đơn vị hàng đầu cung cấp dịch vụ chứng nhận hợp chuẩn theo quy định pháp luật Việt Nam. Chúng tôi hỗ trợ doanh nghiệp đảm bảo sản phẩm tuân thủ các quy chuẩn kỹ thuật quốc gia, tạo điều kiện thuận lợi cho việc sản xuất và kinh doanh.</p>
+                    
+                    <p>Với kinh nghiệm nhiều năm trong lĩnh vực chứng nhận và đội ngũ chuyên gia am hiểu sâu sắc các quy định pháp luật, chúng tôi cam kết mang đến dịch vụ chất lượng cao, quy trình nhanh chóng và chi phí hợp lý.</p>
+                </div>
+            </div>
+
+            <!-- Compliance Categories -->
+            <div class="content-section">
+                <h2 class="section-subtitle">Các lĩnh vực chứng nhận hợp chuẩn</h2>
+                <div class="compliance-categories">
+                    <div class="compliance-card">
+                        <div class="compliance-icon">🐄</div>
+                        <h3 class="compliance-title">Tuân thủ Thức ăn chăn nuôi</h3>
+                        <p class="compliance-description">Tư vấn tuân thủ quy định về sản xuất, kinh doanh thức ăn chăn nuôi</p>
+                        <a href="compliance-feed.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="compliance-card">
+                        <div class="compliance-icon">🦐</div>
+                        <h3 class="compliance-title">Tuân thủ Nuôi trồng thủy sản</h3>
+                        <p class="compliance-description">Tư vấn tuân thủ quy định về nuôi trồng thủy sản, VietGAP, ASC, BAP</p>
+                        <a href="compliance-aquaculture.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="compliance-card">
+                        <div class="compliance-icon">🌍</div>
+                        <h3 class="compliance-title">Tuân thủ Môi trường</h3>
+                        <p class="compliance-description">Tư vấn tuân thủ quy định về bảo vệ môi trường, ĐTM, giấy phép môi trường</p>
+                        <a href="compliance-environment.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regulations -->
+            <div class="content-section">
+                <div class="regulations">
+                    <h2 class="section-title">Quy chuẩn kỹ thuật áp dụng</h2>
+                    
+                    <div class="regulations-grid">
+                        <div class="regulation-item">
+                            <div class="regulation-icon">📋</div>
+                            <h4>QCVN 01-125:2020/BNNPTNT</h4>
+                            <p><strong>Quy chuẩn kỹ thuật quốc gia về thức ăn chăn nuôi</strong></p>
+                            <ul>
+                                <li>Yêu cầu về thành phần dinh dưỡng</li>
+                                <li>Giới hạn tối đa các chất có hại</li>
+                                <li>Yêu cầu về chất lượng vi sinh</li>
+                                <li>Quy định về bao bì, nhãn mác</li>
+                            </ul>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="regulation-icon">🐠</div>
+                            <h4>QCVN 01-139:2020/BNNPTNT</h4>
+                            <p><strong>Quy chuẩn kỹ thuật quốc gia về thức ăn thủy sản</strong></p>
+                            <ul>
+                                <li>Thành phần dinh dưỡng theo từng loài</li>
+                                <li>Chất lượng protein, lipid</li>
+                                <li>Độ ổn định trong nước</li>
+                                <li>An toàn vi sinh</li>
+                            </ul>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="regulation-icon">🌊</div>
+                            <h4>Quy định về chất cải tạo môi trường</h4>
+                            <p><strong>Theo Thông tư 36/2018/TT-BNNPTNT</strong></p>
+                            <ul>
+                                <li>Thành phần hoạt chất</li>
+                                <li>Hiệu quả cải tạo môi trường</li>
+                                <li>An toàn với thủy sản</li>
+                                <li>Không tác động xấu đến môi trường</li>
+                            </ul>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="regulation-icon">⚖️</div>
+                            <h4>Luật Chăn nuôi 2018</h4>
+                            <p><strong>Quy định về thức ăn chăn nuôi</strong></p>
+                            <ul>
+                                <li>Điều kiện sản xuất, kinh doanh</li>
+                                <li>Chất lượng, an toàn</li>
+                                <li>Nhập khẩu, xuất khẩu</li>
+                                <li>Quản lý chất lượng</li>
+                            </ul>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="regulation-icon">🏭</div>
+                            <h4>Nghị định 108/2017/NĐ-CP</h4>
+                            <p><strong>Quy định chi tiết Luật Chăn nuôi</strong></p>
+                            <ul>
+                                <li>Thủ tục chứng nhận hợp chuẩn</li>
+                                <li>Hồ sơ, tài liệu cần thiết</li>
+                                <li>Quy trình thẩm định</li>
+                                <li>Quản lý sau cấp chứng nhận</li>
+                            </ul>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="regulation-icon">🔬</div>
+                            <h4>Tiêu chuẩn phương pháp thử</h4>
+                            <p><strong>TCVN, ISO, AOAC</strong></p>
+                            <ul>
+                                <li>Phương pháp lấy mẫu</li>
+                                <li>Phương pháp phân tích</li>
+                                <li>Đánh giá kết quả</li>
+                                <li>Báo cáo thử nghiệm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process -->
+            <div class="content-section">
+                <h2 class="section-subtitle">Quy trình chứng nhận hợp chuẩn</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4 class="step-title">Tư vấn & Đánh giá</h4>
+                        <p class="step-description">Tư vấn quy chuẩn áp dụng và đánh giá khả năng tuân thủ của sản phẩm</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4 class="step-title">Chuẩn bị hồ sơ</h4>
+                        <p class="step-description">Hỗ trợ chuẩn bị đầy đủ hồ sơ theo quy định</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4 class="step-title">Lấy mẫu kiểm nghiệm</h4>
+                        <p class="step-description">Lấy mẫu đại diện và gửi kiểm nghiệm tại phòng thí nghiệm được chỉ định</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4 class="step-title">Thẩm định hồ sơ</h4>
+                        <p class="step-description">Thẩm định hồ sơ và kết quả kiểm nghiệm</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4 class="step-title">Cấp chứng nhận</h4>
+                        <p class="step-description">Cấp giấy chứng nhận hợp chuẩn quy chuẩn kỹ thuật</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h4 class="step-title">Quản lý sau cấp</h4>
+                        <p class="step-description">Hỗ trợ quản lý và duy trì chứng nhận</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="content-section">
+                <div class="faq-section">
+                    <h2 class="section-subtitle">Câu hỏi thường gặp</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">Thời gian để có chứng nhận hợp chuẩn là bao lâu?</button>
+                        <div class="faq-answer">
+                            <p>Thời gian chứng nhận hợp chuẩn phụ thuộc vào:</p>
+                            <ul>
+                                <li>Loại sản phẩm và độ phức tạp</li>
+                                <li>Mức độ sẵn sàng của hồ sơ</li>
+                                <li>Kết quả kiểm nghiệm</li>
+                            </ul>
+                            <p>Thông thường:</p>
+                            <ul>
+                                <li>Chuẩn bị hồ sơ: 1-2 tuần</li>
+                                <li>Kiểm nghiệm: 2-3 tuần</li>
+                                <li>Thẩm định và cấp chứng nhận: 1-2 tuần</li>
+                                <li><strong>Tổng thời gian: 4-7 tuần</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Chi phí chứng nhận hợp chuẩn bao gồm những gì?</button>
+                        <div class="faq-answer">
+                            <p>Chi phí chứng nhận hợp chuẩn bao gồm:</p>
+                            <ul>
+                                <li><strong>Phí tư vấn:</strong> Tư vấn quy chuẩn và chuẩn bị hồ sơ</li>
+                                <li><strong>Phí kiểm nghiệm:</strong> Chi phí phân tích mẫu tại phòng thí nghiệm</li>
+                                <li><strong>Lệ phí thẩm định:</strong> Phí thẩm định hồ sơ của cơ quan chức năng</li>
+                                <li><strong>Lệ phí cấp giấy chứng nhận:</strong> Phí cấp chứng nhận chính thức</li>
+                            </ul>
+                            <p>Chi phí cụ thể phụ thuộc vào loại sản phẩm và số lượng chỉ tiêu cần kiểm nghiệm.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Giấy chứng nhận hợp chuẩn có thời hạn bao lâu?</button>
+                        <div class="faq-answer">
+                            <p>Thời hạn hiệu lực của giấy chứng nhận hợp chuẩn:</p>
+                            <ul>
+                                <li><strong>Thức ăn chăn nuôi:</strong> 5 năm</li>
+                                <li><strong>Thức ăn thủy sản:</strong> 5 năm</li>
+                                <li><strong>Chất cải tạo môi trường:</strong> 5 năm</li>
+                            </ul>
+                            <p>Trước khi hết hạn 6 tháng, cần tiến hành thủ tục gia hạn chứng nhận.</p>
+                            <p>Chúng tôi sẽ nhắc nhở và hỗ trợ khách hàng gia hạn đúng hạn.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Hồ sơ chứng nhận hợp chuẩn cần những gì?</button>
+                        <div class="faq-answer">
+                            <p>Hồ sơ chứng nhận hợp chuẩn bao gồm:</p>
+                            <ul>
+                                <li><strong>Đơn đề nghị</strong> chứng nhận hợp chuẩn</li>
+                                <li><strong>Giấy chứng nhận đăng ký doanh nghiệp</strong></li>
+                                <li><strong>Tiêu chuẩn cơ sở</strong> hoặc tiêu chuẩn áp dụng</li>
+                                <li><strong>Mô tả quy trình sản xuất</strong></li>
+                                <li><strong>Danh sách nguyên liệu</strong> và nhà cung cấp</li>
+                                <li><strong>Mẫu sản phẩm</strong> để kiểm nghiệm</li>
+                                <li><strong>Tài liệu khác</strong> theo yêu cầu cụ thể</li>
+                            </ul>
+                            <p>Chúng tôi sẽ hỗ trợ khách hàng chuẩn bị đầy đủ hồ sơ theo đúng quy định.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Nếu sản phẩm không đạt yêu cầu thì phải làm gì?</button>
+                        <div class="faq-answer">
+                            <p>Khi sản phẩm không đạt yêu cầu:</p>
+                            <ul>
+                                <li><strong>Phân tích nguyên nhân:</strong> Xác định chỉ tiêu nào không đạt</li>
+                                <li><strong>Tư vấn khắc phục:</strong> Đề xuất biện pháp cải tiến công thức</li>
+                                <li><strong>Điều chỉnh sản phẩm:</strong> Hỗ trợ điều chỉnh thành phần</li>
+                                <li><strong>Kiểm nghiệm lại:</strong> Thực hiện kiểm nghiệm sau khi cải tiến</li>
+                                <li><strong>Hoàn thithiện hồ sơ:</strong> Cập nhật hồ sơ theo sản phẩm mới</li>
+                            </ul>
+                            <p>Chúng tôi cam kết đồng hành cùng khách hàng đến khi có được chứng nhận.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Cần chứng nhận hợp chuẩn?</h2>
+            <p class="cta-description">Liên hệ ngay để nhận tư vấn miễn phí và báo giá chi tiết cho nhu cầu chứng nhận hợp chuẩn của bạn</p>
+            <a href="contact.html" class="btn">Tư vấn miễn phí</a>
+            <a href="tel:0931004818" class="btn btn-outline">Hotline: 0931.004.818</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Công ty hàng đầu về dịch vụ kiểm nghiệm, chứng nhận và giám định tại Việt Nam.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Dịch vụ</h3>
+                    <p><a href="testing-services.html">Dịch vụ Kiểm nghiệm</a></p>
+                    <p><a href="certification-services.html">Dịch vụ Chứng nhận</a></p>
+                    <p><a href="inspection-services.html">Dịch vụ Kiểm tra</a></p>
+                    <p><a href="compliance-services.html">Chứng nhận Hợp chuẩn</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">YouTube</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

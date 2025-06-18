@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ Kiểm tra - Giám định Chất lượng | Kiểm tra Thực phẩm | Kiểm tra Xuất nhập khẩu</title>
+    <meta name="description" content="Dịch vụ kiểm tra chuyên nghiệp: kiểm tra thực phẩm, thủy sản, nông sản, thức ăn chăn nuôi, phân bón, kiểm tra nhà nước hàng nhập khẩu. Đội ngũ thanh tra viên giàu kinh nghiệm, quy trình chuẩn quốc tế.">
+    <meta name="keywords" content="kiểm tra thực phẩm, kiểm tra thủy sản, kiểm tra nông sản, kiểm tra xuất khẩu, kiểm tra nhập khẩu, giám định chất lượng, thanh tra viên">
+    <link rel="canonical" href="https://landing.sci-techvn.com/inspection-services.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f8f9fa;
+            padding: 100px 0 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6600;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #0066cc;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Inspection Categories */
+        .inspection-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .inspection-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #0066cc;
+            transition: transform 0.3s ease;
+        }
+
+        .inspection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,102,204,0.2);
+        }
+
+        .inspection-icon {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        .inspection-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .inspection-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .inspection-features {
+            list-style: none;
+        }
+
+        .inspection-features li {
+            padding: 0.3rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .inspection-features li:before {
+            content: "✓";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            background: #0066cc;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .step-description {
+            color: #666;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 4rem 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-question:after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            font-size: 1.5rem;
+            color: #0066cc;
+        }
+
+        .faq-question.active:after {
+            content: "-";
+        }
+
+        .faq-answer {
+            padding: 0 0 1rem 0;
+            color: #666;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e55a00;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0066cc;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #0066cc;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .inspection-categories,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > Dịch vụ Kiểm tra
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Dịch vụ Kiểm tra - Giám định Chuyên nghiệp</h1>
+            <p>Cung cấp dịch vụ kiểm tra, giám định chất lượng hàng hóa toàn diện. Đội ngũ thanh tra viên giàu kinh nghiệm, quy trình chuẩn quốc tế, báo cáo có giá trị pháp lý.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">10000+</div>
+                    <div class="stat-label">Lô hàng đã kiểm tra</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Lĩnh vực chuyên môn</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Hỗ trợ khẩn cấp</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="content-section">
+                <h2 class="section-title">Đối tác tin cậy trong kiểm tra - giám định</h2>
+                <div class="text-content">
+                    <p><strong>SCI Tech Vietnam</strong> là đơn vị hàng đầu cung cấp dịch vụ kiểm tra, giám định chất lượng hàng hóa tại Việt Nam. Chúng tôi hỗ trợ doanh nghiệp đảm bảo chất lượng sản phẩm, tuân thủ quy định pháp luật và yêu cầu của thị trường xuất khẩu.</p>
+                    
+                    <p>Với đội ngũ thanh tra viên được đào tạo chuyên nghiệp và trang thiết bị hiện đại, chúng tôi cam kết cung cấp dịch vụ kiểm tra chính xác, khách quan và có giá trị pháp lý cao.</p>
+                </div>
+            </div>
+
+            <!-- Inspection Categories -->
+            <div class="content-section">
+                <h2 class="section-subtitle">Các lĩnh vực kiểm tra chuyên sâu</h2>
+                <div class="inspection-categories">
+                    <div class="inspection-card">
+                        <div class="inspection-icon">🍽️</div>
+                        <h3 class="inspection-title">Thanh tra Thực phẩm</h3>
+                        <p class="inspection-description">Kiểm tra nhà máy, cơ sở chế biến, nhà hàng, siêu thị, cơ sở sản xuất thực phẩm</p>
+                        <a href="inspection-food.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="inspection-card">
+                        <div class="inspection-icon">🦐</div>
+                        <h3 class="inspection-title">Thanh tra Thủy sản</h3>
+                        <p class="inspection-description">Kiểm tra trang trại nuôi, tàu cá, cơ sở chế biến, kho lạnh, chợ thủy sản</p>
+                        <a href="inspection-seafood.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="inspection-card">
+                        <div class="inspection-icon">🌾</div>
+                        <h3 class="inspection-title">Thanh tra Nông nghiệp</h3>
+                        <p class="inspection-description">Kiểm tra trang trại, vườn ươm, cơ sở sản xuất hữu cơ, nhà kính, kho bảo quản</p>
+                        <a href="inspection-agriculture.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="inspection-card">
+                        <div class="inspection-icon">🐄</div>
+                        <h3 class="inspection-title">Thanh tra Thức ăn chăn nuôi</h3>
+                        <p class="inspection-description">Kiểm tra nhà máy, kho nguyên liệu, dây chuyền sản xuất, phòng thí nghiệm</p>
+                        <a href="inspection-feed.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="inspection-card">
+                        <div class="inspection-icon">🌱</div>
+                        <h3 class="inspection-title">Thanh tra Phân bón</h3>
+                        <p class="inspection-description">Kiểm tra cơ sở sản xuất, kho nguyên liệu, quy trình trộn phối, cửa hàng bán lẻ</p>
+                        <a href="inspection-fertilizer.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="inspection-card">
+                        <div class="inspection-icon">🏛️</div>
+                        <h3 class="inspection-title">Thanh tra Nhà nước</h3>
+                        <p class="inspection-description">Hỗ trợ chuẩn bị hồ sơ, đối phó thanh tra cơ quan chức năng, tuân thủ quy định</p>
+                        <a href="inspection-state.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="content-section">
+                <div class="benefits">
+                    <h2 class="section-title">Ưu điểm vượt trội của SCI Tech</h2>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">👨‍🔬</div>
+                            <h4>Thanh tra viên chuyên nghiệp</h4>
+                            <p>Đội ngũ được đào tạo bài bản, có chứng chỉ quốc tế</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📋</div>
+                            <h4>Quy trình chuẩn mực</h4>
+                            <p>Tuân thủ quy trình kiểm tra quốc tế ISO 17020</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">⚡</div>
+                            <h4>Phản hồi nhanh chóng</h4>
+                            <p>Báo cáo sơ bộ trong 24h, báo cáo chính thức trong 3 ngày</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🌐</div>
+                            <h4>Phủ sóng toàn quốc</h4>
+                            <p>Có mặt tại tất cả cảng biển, sân bay chính</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📞</div>
+                            <h4>Hỗ trợ 24/7</h4>
+                            <p>Sẵn sàng hỗ trợ khẩn cấp mọi lúc, mọi nơi</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💰</div>
+                            <h4>Chi phí minh bạch</h4>
+                            <p>Báo giá rõ ràng, không phát sinh chi phí ẩn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process -->
+            <div class="content-section">
+                <h2 class="section-subtitle">Quy trình kiểm tra chuyên nghiệp</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4 class="step-title">Tiếp nhận yêu cầu</h4>
+                        <p class="step-description">Tiếp nhận và xác nhận yêu cầu kiểm tra từ khách hàng</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4 class="step-title">Lập kế hoạch</h4>
+                        <p class="step-description">Xây dựng kế hoạch kiểm tra chi tiết và cử thanh tra viên</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4 class="step-title">Thực hiện kiểm tra</h4>
+                        <p class="step-description">Tiến hành kiểm tra tại hiện trường theo quy trình chuẩn</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4 class="step-title">Lấy mẫu</h4>
+                        <p class="step-description">Lấy mẫu đại diện để gửi kiểm nghiệm (nếu cần)</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4 class="step-title">Đánh giá kết quả</h4>
+                        <p class="step-description">Phân tích, đánh giá kết quả kiểm tra và kiểm nghiệm</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h4 class="step-title">Báo cáo</h4>
+                        <p class="step-description">Xuất báo cáo kiểm tra có giá trị pháp lý</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="content-section">
+                <div class="faq-section">
+                    <h2 class="section-subtitle">Câu hỏi thường gặp</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">Thời gian thực hiện kiểm tra là bao lâu?</button>
+                        <div class="faq-answer">
+                            <p>Thời gian kiểm tra phụ thuộc vào:</p>
+                            <ul>
+                                <li>Loại hàng hóa và quy mô lô hàng</li>
+                                <li>Yêu cầu kiểm tra cụ thể</li>
+                                <li>Vị trí kiểm tra (cảng, kho, nhà máy)</li>
+                            </ul>
+                            <p>Thông thường:</p>
+                            <ul>
+                                <li>Kiểm tra cảm quan: 2-4 giờ</li>
+                                <li>Kiểm tra + lấy mẫu: 4-8 giờ</li>
+                                <li>Kiểm tra toàn diện: 1-2 ngày</li>
+                            </ul>
+                            <p>Báo cáo sơ bộ trong 24h, báo cáo chính thức trong 3 ngày làm việc.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Chi phí kiểm tra được tính như thế nào?</button>
+                        <div class="faq-answer">
+                            <p>Chi phí kiểm tra bao gồm:</p>
+                            <ul>
+                                <li><strong>Phí cơ bản:</strong> Theo số giờ/ngày kiểm tra</li>
+                                <li><strong>Chi phí di chuyển:</strong> Phụ thuộc khoảng cách</li>
+                                <li><strong>Phí lấy mẫu:</strong> Nếu cần kiểm nghiệm</li>
+                                <li><strong>Phí khẩn cấp:</strong> Ngoài giờ hành chính (150% phí cơ bản)</li>
+                            </ul>
+                            <p>Chúng tôi có bảng giá cố định cho từng loại dịch vụ, minh bạch và cạnh tranh.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Báo cáo kiểm tra có giá trị pháp lý không?</button>
+                        <div class="faq-answer">
+                            <p>Có, báo cáo kiểm tra của SCI Tech có đầy đủ giá trị pháp lý vì:</p>
+                            <ul>
+                                <li>Được thực hiện bởi thanh tra viên có chứng chỉ</li>
+                                <li>Tuân thủ quy trình kiểm tra chuẩn quốc tế</li>
+                                <li>Có đầy đủ chữ ký, con dấu theo quy định</li>
+                                <li>Được các cơ quan chức năng công nhận</li>
+                                <li>Có thể sử dụng trong tranh chấp thương mại</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Có thể kiểm tra tại bất kỳ đâu không?</button>
+                        <div class="faq-answer">
+                            <p>Chúng tôi có thể thực hiện kiểm tra tại:</p>
+                            <ul>
+                                <li><strong>Cảng biển:</strong> Tất cả cảng lớn trên toàn quốc</li>
+                                <li><strong>Sân bay:</strong> Tân Sơn Nhất, Nội Bài, Đà Nẵng...</li>
+                                <li><strong>Kho hàng:</strong> Kho của doanh nghiệp</li>
+                                <li><strong>Nhà máy:</strong> Tại nơi sản xuất</li>
+                                <li><strong>Trang trại:</strong> Nơi nuôi trồng, thu hoạch</li>
+                                <li><strong>Phương tiện vận chuyển:</strong> Container, xe tải...</li>
+                            </ul>
+                            <p>Chúng tôi có đội ngũ thanh tra viên tại các tỉnh thành chính.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Quy trình xử lý khi hàng hóa không đạt yêu cầu?</button>
+                        <div class="faq-answer">
+                            <p>Khi phát hiện hàng hóa không đạt yêu cầu:</p>
+                            <ul>
+                                <li>Thông báo ngay cho khách hàng</li>
+                                <li>Ghi nhận chi tiết các vấn đề trong báo cáo</li>
+                                <li>Đề xuất biện pháp khắc phục (nếu có thể)</li>
+                                <li>Tư vấn về quy trình xử lý</li>
+                                <li>Hỗ trợ liên hệ với các bên liên quan</li>
+                                <li>Thực hiện kiểm tra lại sau khi khắc phục</li>
+                            </ul>
+                            <p>Chúng tôi luôn đồng hành cùng khách hàng để tìm giải pháp tối ưu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Cần kiểm tra hàng hóa?</h2>
+            <p class="cta-description">Liên hệ ngay để nhận tư vấn miễn phí và báo giá chi tiết cho nhu cầu kiểm tra của bạn</p>
+            <a href="contact.html" class="btn">Yêu cầu kiểm tra</a>
+            <a href="tel:0931004818" class="btn btn-outline">Hotline: 0931.004.818</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Công ty hàng đầu về dịch vụ kiểm nghiệm, chứng nhận và giám định tại Việt Nam.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Dịch vụ</h3>
+                    <p><a href="testing-services.html">Dịch vụ Kiểm nghiệm</a></p>
+                    <p><a href="certification-services.html">Dịch vụ Chứng nhận</a></p>
+                    <p><a href="inspection-services.html">Dịch vụ Kiểm tra</a></p>
+                    <p><a href="compliance-services.html">Chứng nhận Hợp chuẩn</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">YouTube</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

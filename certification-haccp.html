@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chứng nhận HACCP - Phân tích Mối nguy và Điểm kiểm soát tới hạn | SCI Tech Vietnam</title>
+    <meta name="description" content="Dịch vụ chứng nhận HACCP chuyên nghiệp tại SCI Tech Vietnam. Hỗ trợ xây dựng hệ thống HACCP đảm bảo an toàn thực phẩm theo tiêu chuẩn quốc tế.">
+    <meta name="keywords" content="chứng nhận HACCP, an toàn thực phẩm, phân tích mối nguy, điểm kiểm soát tới hạn, HACCP Vietnam">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 40px; width: auto; }
+        .logo-text { font-size: 24px; font-weight: bold; color: #0066cc; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #0066cc; }
+        
+        .breadcrumb { background: #f8f9fa; padding: 100px 0 20px; font-size: 14px; }
+        .breadcrumb a { color: #0066cc; text-decoration: none; }
+        
+        .hero { background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        
+        .main-content { padding: 80px 0; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2rem; color: #dc3545; text-align: center; }
+        .text-content { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+        
+        .principles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .principle-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); border-top: 4px solid #dc3545; }
+        .principle-number { background: #dc3545; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-weight: bold; }
+        .principle-title { font-size: 1.3rem; margin-bottom: 1rem; color: #333; }
+        .principle-description { color: #555; }
+        
+        .benefits-section { background: #f8f9fa; padding: 3rem 0; margin: 3rem 0; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .benefit-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .benefit-icon { font-size: 2rem; color: #dc3545; margin-bottom: 1rem; }
+        
+        .btn { display: inline-block; background: #ff6600; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin: 10px; font-weight: bold; transition: background 0.3s ease; }
+        .btn:hover { background: #e55a00; }
+        
+        footer { background: #333; color: white; padding: 3rem 0 1rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; }
+        .footer-section p, .footer-section a { color: #ccc; text-decoration: none; line-height: 1.6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #555; color: #ccc; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .principles-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > <a href="services.html#certification">Chứng nhận</a> > Chứng nhận HACCP
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Chứng nhận HACCP</h1>
+            <p>Hệ thống Phân tích Mối nguy và Điểm kiểm soát tới hạn - Tiêu chuẩn vàng trong đảm bảo an toàn thực phẩm được công nhận toàn cầu.</p>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="text-content">
+                <h2 class="section-title">HACCP - Nền tảng an toàn thực phẩm</h2>
+                <p><strong>HACCP (Hazard Analysis and Critical Control Points)</strong> là hệ thống quản lý an toàn thực phẩm dựa trên khoa học, tập trung vào việc phòng ngừa thay vì kiểm tra sản phẩm cuối. Đây là tiêu chuẩn bắt buộc tại nhiều quốc gia và là yêu cầu cơ bản cho xuất khẩu thực phẩm.</p>
+                
+                <p>SCI Tech Vietnam hỗ trợ doanh nghiệp xây dựng và chứng nhận hệ thống HACCP hiệu quả, đảm bảo tuân thủ các quy định quốc tế và nâng cao khả năng cạnh tranh trên thị trường toàn cầu.</p>
+            </div>
+
+            <h3 class="section-title">7 Nguyên tắc cơ bản của HACCP</h3>
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="principle-number">1</div>
+                    <h4 class="principle-title">Phân tích mối nguy</h4>
+                    <p class="principle-description">Xác định và đánh giá các mối nguy sinh học, hóa học và vật lý có thể xảy ra trong quá trình sản xuất thực phẩm.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-number">2</div>
+                    <h4 class="principle-title">Xác định CCP</h4>
+                    <p class="principle-description">Xác định các Điểm Kiểm soát Tới hạn (Critical Control Points) - những điểm mà việc kiểm soát là cần thiết để ngăn ngừa mối nguy.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-number">3</div>
+                    <h4 class="principle-title">Thiết lập giới hạn tới hạn</h4>
+                    <p class="principle-description">Thiết lập các giới hạn tới hạn có thể đo lường được tại mỗi CCP để phân biệt giữa an toàn và không an toàn.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-number">4</div>
+                    <h4 class="principle-title">Thiết lập hệ thống giám sát</h4>
+                    <p class="principle-description">Xây dựng hệ thống giám sát để theo dõi các CCP và đảm bảo tuân thủ các giới hạn tới hạn.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-number">5</div>
+                    <h4 class="principle-title">Thiết lập hành động khắc phục</h4>
+                    <p class="principle-description">Xác định các hành động khắc phục khi giám sát cho thấy có sự lệch khỏi giới hạn tới hạn tại CCP.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-number">6</div>
+                    <h4 class="principle-title">Thiết lập thủ tục xác minh</h4>
+                    <p class="principle-description">Thiết lập các thủ tục để xác minh rằng hệ thống HACCP đang hoạt động hiệu quả.</p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-number">7</div>
+                    <h4 class="principle-title">Thiết lập hệ thống lưu hồ sơ</h4>
+                    <p class="principle-description">Xây dựng hệ thống ghi chép và lưu trữ tài liệu chứng minh hệ thống HACCP được thực hiện đúng.</p>
+                </div>
+            </div>
+
+            <div class="benefits-section">
+                <div class="container">
+                    <h3 class="section-title">Lợi ích của chứng nhận HACCP</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🛡️</div>
+                            <h4>Đảm bảo an toàn thực phẩm</h4>
+                            <p>Ngăn ngừa các mối nguy có thể gây hại cho người tiêu dùng</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🌍</div>
+                            <h4>Mở rộng thị trường xuất khẩu</h4>
+                            <p>Đáp ứng yêu cầu xuất khẩu của các nước phát triển</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💰</div>
+                            <h4>Giảm chi phí và lãng phí</h4>
+                            <p>Phòng ngừa sự cố, giảm sản phẩm lỗi và chi phí thu hồi</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">⚖️</div>
+                            <h4>Tuân thủ pháp luật</h4>
+                            <p>Đáp ứng các quy định pháp luật về an toàn thực phẩm</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🏆</div>
+                            <h4>Nâng cao uy tín thương hiệu</h4>
+                            <p>Tăng niềm tin của khách hàng và đối tác</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📈</div>
+                            <h4>Cải thiện hiệu quả sản xuất</h4>
+                            <p>Tối ưu hóa quy trình và nâng cao chất lượng sản phẩm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3>Cần chứng nhận HACCP cho doanh nghiệp thực phẩm?</h3>
+                <p style="margin: 1rem 0;">Liên hệ ngay để nhận tư vấn miễn phí về hệ thống HACCP</p>
+                <a href="contact.html" class="btn">Liên hệ ngay</a>
+                <a href="tel:0931004818" class="btn">Gọi: 0931.004.818</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Chuyên gia hàng đầu về chứng nhận HACCP và an toàn thực phẩm tại Việt Nam.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

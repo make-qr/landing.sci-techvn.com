@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh tra Kiểm tra Nông nghiệp - VietGAP | GlobalGAP | Trang trại an toàn | Sản xuất hữu cơ</title>
+    <meta name="description" content="Dịch vụ thanh tra kiểm tra nông nghiệp chuyên nghiệp. Đánh giá VietGAP, GlobalGAP, trang trại an toàn, sản xuất hữu cơ, tuân thủ quy định BVTV.">
+    <meta name="keywords" content="thanh tra nông nghiệp, VietGAP, GlobalGAP, trang trại an toàn, sản xuất hữu cơ, BVTV, GAP">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 40px; width: auto; }
+        .logo-text { font-size: 24px; font-weight: bold; color: #0066cc; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #0066cc; }
+        
+        .breadcrumb { background: #f8f9fa; padding: 100px 0 20px; font-size: 14px; }
+        .breadcrumb a { color: #0066cc; text-decoration: none; }
+        
+        .hero { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        
+        .main-content { padding: 80px 0; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2rem; color: #28a745; text-align: center; }
+        .text-content { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+        
+        .inspection-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .inspection-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); border-top: 4px solid #28a745; }
+        .inspection-icon { font-size: 3rem; color: #28a745; margin-bottom: 1rem; text-align: center; }
+        .inspection-title { font-size: 1.5rem; margin-bottom: 1rem; color: #333; text-align: center; }
+        .inspection-description { color: #666; margin-bottom: 1.5rem; text-align: center; }
+        .inspection-list { list-style: none; }
+        .inspection-list li { padding: 0.3rem 0; color: #555; position: relative; padding-left: 1.5rem; }
+        .inspection-list li:before { content: "✓"; color: #28a745; font-weight: bold; position: absolute; left: 0; }
+        
+        .standards-section { background: #f8f9fa; padding: 3rem 0; margin: 3rem 0; }
+        .standards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .standard-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .standard-icon { font-size: 2rem; color: #28a745; margin-bottom: 1rem; }
+        
+        .crops-section { margin: 3rem 0; }
+        .crops-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .crop-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .crop-icon { font-size: 2rem; margin-bottom: 1rem; }
+        
+        .btn { display: inline-block; background: #ff6600; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin: 10px; font-weight: bold; transition: background 0.3s ease; }
+        .btn:hover { background: #e55a00; }
+        
+        footer { background: #333; color: white; padding: 3rem 0 1rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; }
+        .footer-section p, .footer-section a { color: #ccc; text-decoration: none; line-height: 1.6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #555; color: #ccc; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .inspection-areas { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > <a href="services.html#inspection">Thanh tra</a> > Thanh tra Nông nghiệp
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Thanh tra Kiểm tra Nông nghiệp</h1>
+            <p>Dịch vụ thanh tra kiểm tra nông nghiệp chuyên nghiệp. Đánh giá tuân thủ GAP, sản xuất hữu cơ, an toàn thực phẩm và các tiêu chuẩn nông nghiệp bền vững.</p>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="text-content">
+                <h2 class="section-title">Các lĩnh vực thanh tra nông nghiệp</h2>
+                <p>SCI Tech cung cấp dịch vụ thanh tra toàn diện cho ngành nông nghiệp, từ trang trại sản xuất đến cơ sở chế biến, đảm bảo tuân thủ các tiêu chuẩn GAP và quy định an toàn thực phẩm.</p>
+            </div>
+
+            <div class="inspection-areas">
+                <div class="inspection-card">
+                    <div class="inspection-icon">🌾</div>
+                    <h3 class="inspection-title">Trang trại trồng trọt</h3>
+                    <p class="inspection-description">Thanh tra trang trại sản xuất nông sản an toàn</p>
+                    <ul class="inspection-list">
+                        <li>Thực hành nông nghiệp tốt (GAP)</li>
+                        <li>Sử dụng thuốc BVTV</li>
+                        <li>Quản lý phân bón</li>
+                        <li>Chất lượng nước tưới</li>
+                        <li>Vệ sinh thu hoạch</li>
+                        <li>Ghi chép nhật ký sản xuất</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🌱</div>
+                    <h3 class="inspection-title">Sản xuất hữu cơ</h3>
+                    <p class="inspection-description">Kiểm tra trang trại sản xuất hữu cơ</p>
+                    <ul class="inspection-list">
+                        <li>Không sử dụng hóa chất tổng hợp</li>
+                        <li>Phân bón hữu cơ</li>
+                        <li>Kiểm soát dịch hại sinh học</li>
+                        <li>Cách ly với sản xuất thông thường</li>
+                        <li>Truy xuất nguồn gốc</li>
+                        <li>Chứng nhận hữu cơ</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🏡</div>
+                    <h3 class="inspection-title">Nhà kính & Nhà lưới</h3>
+                    <p class="inspection-description">Thanh tra cơ sở sản xuất trong nhà</p>
+                    <ul class="inspection-list">
+                        <li>Hệ thống tưới tiêu</li>
+                        <li>Kiểm soát khí hậu</li>
+                        <li>Quản lý dinh dưỡng</li>
+                        <li>Phòng trừ dịch hại</li>
+                        <li>Vệ sinh môi trường</li>
+                        <li>An toàn lao động</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🏭</div>
+                    <h3 class="inspection-title">Cơ sở chế biến</h3>
+                    <p class="inspection-description">Kiểm tra nhà máy chế biến nông sản</p>
+                    <ul class="inspection-list">
+                        <li>Hệ thống HACCP</li>
+                        <li>Vệ sinh cơ sở sản xuất</li>
+                        <li>Quy trình chế biến</li>
+                        <li>Kiểm soát chất lượng</li>
+                        <li>Bao bì và nhãn mác</li>
+                        <li>Lưu trữ sản phẩm</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🌿</div>
+                    <h3 class="inspection-title">Vườn ươm giống</h3>
+                    <p class="inspection-description">Thanh tra cơ sở sản xuất giống cây trồng</p>
+                    <ul class="inspection-list">
+                        <li>Chất lượng giống</li>
+                        <li>Quy trình nhân giống</li>
+                        <li>Phòng trừ sâu bệnh</li>
+                        <li>Ghi nhãn và truy xuất</li>
+                        <li>Điều kiện bảo quản</li>
+                        <li>Kiểm định chất lượng</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">📦</div>
+                    <h3 class="inspection-title">Kho bảo quản</h3>
+                    <p class="inspection-description">Kiểm tra kho bảo quản nông sản</p>
+                    <ul class="inspection-list">
+                        <li>Điều kiện nhiệt độ, độ ẩm</li>
+                        <li>Thông gió và chiếu sáng</li>
+                        <li>Vệ sinh kho bãi</li>
+                        <li>Phòng trừ sâu kho</li>
+                        <li>Phân loại sản phẩm</li>
+                        <li>Ghi chép xuất nhập kho</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="standards-section">
+                <div class="container">
+                    <h3 class="section-title">Tiêu chuẩn áp dụng</h3>
+                    <div class="standards-grid">
+                        <div class="standard-item">
+                            <div class="standard-icon">🇻🇳</div>
+                            <h4>VietGAP</h4>
+                            <p>Thực hành nông nghiệp tốt Việt Nam</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🌍</div>
+                            <h4>GlobalGAP</h4>
+                            <p>Tiêu chuẩn nông nghiệp toàn cầu</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🏛️</div>
+                            <h4>ASEAN GAP</h4>
+                            <p>Tiêu chuẩn nông nghiệp ASEAN</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🌱</div>
+                            <h4>Organic Standards</h4>
+                            <p>Tiêu chuẩn sản xuất hữu cơ</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🇺🇸</div>
+                            <h4>USDA Organic</h4>
+                            <p>Tiêu chuẩn hữu cơ Hoa Kỳ</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🇪🇺</div>
+                            <h4>EU Organic</h4>
+                            <p>Quy định hữu cơ Liên minh Châu Âu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="crops-section">
+                <h3 class="section-title">Các loại cây trồng được thanh tra</h3>
+                <div class="crops-grid">
+                    <div class="crop-item">
+                        <div class="crop-icon">🌾</div>
+                        <h4>Lúa gạo</h4>
+                        <p>Lúa nước, lúa khô</p>
+                    </div>
+                    <div class="crop-item">
+                        <div class="crop-icon">🥕</div>
+                        <h4>Rau củ</h4>
+                        <p>Rau xanh, củ quả</p>
+                    </div>
+                    <div class="crop-item">
+                        <div class="crop-icon">🍎</div>
+                        <h4>Trái cây</h4>
+                        <p>Cam, chanh, xoài, nho</p>
+                    </div>
+                    <div class="crop-item">
+                        <div class="crop-icon">☕</div>
+                        <h4>Cây công nghiệp</h4>
+                        <p>Cà phê, ca cao, chè</p>
+                    </div>
+                    <div class="crop-item">
+                        <div class="crop-icon">🌶️</div>
+                        <h4>Gia vị</h4>
+                        <p>Tiêu, gừng, tỏi, ớt</p>
+                    </div>
+                    <div class="crop-item">
+                        <div class="crop-icon">🌸</div>
+                        <h4>Hoa cảnh</h4>
+                        <p>Hoa cắt cành, cây cảnh</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3>Cần dịch vụ thanh tra nông nghiệp?</h3>
+                <p style="margin: 1rem 0;">Liên hệ ngay để đánh giá và cải thiện chất lượng sản xuất nông nghiệp</p>
+                <a href="contact.html" class="btn">Liên hệ ngay</a>
+                <a href="tel:0931004818" class="btn">Gọi: 0931.004.818</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Đối tác tin cậy trong việc thanh tra nông nghiệp, hỗ trợ nông dân sản xuất an toàn và bền vững.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

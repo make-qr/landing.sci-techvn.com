@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chứng nhận Tiêu chuẩn Khách hàng | SCI Tech Vietnam</title>
+    <meta name="description" content="Dịch vụ chứng nhận theo tiêu chuẩn riêng của khách hàng tại SCI Tech Vietnam. Hỗ trợ tiêu chuẩn doanh nghiệp, chuỗi cung ứng và đối tác thương mại.">
+    <meta name="keywords" content="chứng nhận tiêu chuẩn khách hàng, tiêu chuẩn doanh nghiệp, tiêu chuẩn chuỗi cung ứng, tiêu chuẩn đối tác thương mại">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 40px; width: auto; }
+        .logo-text { font-size: 24px; font-weight: bold; color: #0066cc; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #0066cc; }
+        
+        .breadcrumb { background: #f8f9fa; padding: 100px 0 20px; font-size: 14px; }
+        .breadcrumb a { color: #0066cc; text-decoration: none; }
+        
+        .hero { background: linear-gradient(135deg, #6f42c1 0%, #4527a0 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        
+        .main-content { padding: 80px 0; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2rem; color: #6f42c1; text-align: center; }
+        .text-content { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+        
+        .custom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .custom-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); border-top: 4px solid #6f42c1; }
+        .custom-icon { font-size: 2rem; font-weight: bold; color: #6f42c1; margin-bottom: 1rem; }
+        .custom-title { font-size: 1.3rem; margin-bottom: 1rem; color: #333; }
+        .custom-description { color: #555; margin-bottom: 1rem; }
+        .benefits-list { list-style: none; }
+        .benefits-list li { padding: 0.3rem 0; color: #555; position: relative; padding-left: 1.5rem; }
+        .benefits-list li:before { content: "✓"; color: #6f42c1; font-weight: bold; position: absolute; left: 0; }
+        
+        .process-section { background: #f8f9fa; padding: 3rem 0; margin: 3rem 0; }
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .process-step { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .step-number { background: #6f42c1; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; }
+        
+        .btn { display: inline-block; background: #ff6600; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin: 10px; font-weight: bold; transition: background 0.3s ease; }
+        .btn:hover { background: #e55a00; }
+        
+        footer { background: #333; color: white; padding: 3rem 0 1rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; }
+        .footer-section p, .footer-section a { color: #ccc; text-decoration: none; line-height: 1.6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #555; color: #ccc; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .custom-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > <a href="certification-services.html">Chứng nhận</a> > Tiêu chuẩn Khách hàng
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Chứng nhận Tiêu chuẩn Khách hàng</h1>
+            <p>Dịch vụ chứng nhận theo yêu cầu riêng của khách hàng và đối tác thương mại. Đáp ứng các tiêu chuẩn đặc thù của từng ngành nghề, thị trường và đối tác kinh doanh.</p>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="text-content">
+                <h2 class="section-title">Các tiêu chuẩn khách hàng chúng tôi cung cấp</h2>
+                <p>SCI Tech Vietnam cung cấp dịch vụ chứng nhận theo các tiêu chuẩn riêng của khách hàng, giúp doanh nghiệp đáp ứng yêu cầu đặc thù của đối tác, thị trường và chuỗi cung ứng.</p>
+            </div>
+
+            <div class="custom-grid">
+                <div class="custom-card">
+                    <div class="custom-icon">🏢</div>
+                    <h3 class="custom-title">Tiêu chuẩn Doanh nghiệp</h3>
+                    <p class="custom-description">Chứng nhận theo tiêu chuẩn riêng do doanh nghiệp lớn đặt ra cho nhà cung cấp và đối tác.</p>
+                    <ul class="benefits-list">
+                        <li>Đáp ứng yêu cầu của doanh nghiệp lớn</li>
+                        <li>Trở thành nhà cung cấp được chấp thuận</li>
+                        <li>Tăng cơ hội hợp tác kinh doanh</li>
+                        <li>Nâng cao vị thế trong chuỗi cung ứng</li>
+                        <li>Tiếp cận thị trường mới</li>
+                    </ul>
+                </div>
+
+                <div class="custom-card">
+                    <div class="custom-icon">⛓️</div>
+                    <h3 class="custom-title">Tiêu chuẩn Chuỗi Cung ứng</h3>
+                    <p class="custom-description">Chứng nhận đáp ứng các tiêu chuẩn đặc thù của chuỗi cung ứng quốc tế và khu vực.</p>
+                    <ul class="benefits-list">
+                        <li>Tham gia chuỗi cung ứng toàn cầu</li>
+                        <li>Đáp ứng yêu cầu truy xuất nguồn gốc</li>
+                        <li>Tuân thủ quy định về chất lượng</li>
+                        <li>Tăng tính cạnh tranh trong đấu thầu</li>
+                        <li>Giảm rủi ro gián đoạn cung ứng</li>
+                    </ul>
+                </div>
+
+                <div class="custom-card">
+                    <div class="custom-icon">🤝</div>
+                    <h3 class="custom-title">Tiêu chuẩn Đối tác Thương mại</h3>
+                    <p class="custom-description">Chứng nhận theo yêu cầu của đối tác thương mại quốc tế và các tập đoàn đa quốc gia.</p>
+                    <ul class="benefits-list">
+                        <li>Đáp ứng yêu cầu của đối tác nước ngoài</li>
+                        <li>Mở rộng thị trường xuất khẩu</li>
+                        <li>Tăng giá trị sản phẩm/dịch vụ</li>
+                        <li>Xây dựng quan hệ đối tác bền vững</li>
+                        <li>Giảm rào cản thương mại</li>
+                    </ul>
+                </div>
+
+                <div class="custom-card">
+                    <div class="custom-icon">📝</div>
+                    <h3 class="custom-title">Quy chuẩn Nội bộ</h3>
+                    <p class="custom-description">Chứng nhận theo quy chuẩn nội bộ của doanh nghiệp để đảm bảo tính nhất quán và chất lượng.</p>
+                    <ul class="benefits-list">
+                        <li>Chuẩn hóa quy trình nội bộ</li>
+                        <li>Đảm bảo chất lượng nhất quán</li>
+                        <li>Tăng hiệu quả quản lý</li>
+                        <li>Nâng cao năng lực cạnh tranh</li>
+                        <li>Xây dựng thương hiệu mạnh</li>
+                    </ul>
+                </div>
+
+                <div class="custom-card">
+                    <div class="custom-icon">🌐</div>
+                    <h3 class="custom-title">Tiêu chuẩn Xuất khẩu Đặc biệt</h3>
+                    <p class="custom-description">Chứng nhận theo yêu cầu đặc biệt của thị trường xuất khẩu và quốc gia nhập khẩu.</p>
+                    <ul class="benefits-list">
+                        <li>Đáp ứng quy định thị trường mục tiêu</li>
+                        <li>Vượt qua rào cản kỹ thuật</li>
+                        <li>Tăng khả năng xuất khẩu</li>
+                        <li>Giảm rủi ro từ chối hàng</li>
+                        <li>Tối ưu hóa quy trình thông quan</li>
+                    </ul>
+                </div>
+
+                <div class="custom-card">
+                    <div class="custom-icon">📊</div>
+                    <h3 class="custom-title">Tiêu chuẩn Ngành Đặc thù</h3>
+                    <p class="custom-description">Chứng nhận theo tiêu chuẩn đặc thù của từng ngành nghề cụ thể.</p>
+                    <ul class="benefits-list">
+                        <li>Đáp ứng yêu cầu ngành nghề</li>
+                        <li>Tăng uy tín trong lĩnh vực</li>
+                        <li>Nâng cao năng lực chuyên môn</li>
+                        <li>Mở rộng cơ hội kinh doanh</li>
+                        <li>Tạo lợi thế cạnh tranh</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="process-section">
+                <div class="container">
+                    <h3 class="section-title">Quy trình chứng nhận tiêu chuẩn khách hàng</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h4>Phân tích Yêu cầu</h4>
+                            <p>Xác định chi tiết yêu cầu của tiêu chuẩn khách hàng</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h4>Đánh giá Hiện trạng</h4>
+                            <p>Phân tích khoảng cách giữa hiện trạng và yêu cầu</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h4>Xây dựng Kế hoạch</h4>
+                            <p>Lập kế hoạch triển khai và đáp ứng tiêu chuẩn</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h4>Triển khai Thực hiện</h4>
+                            <p>Áp dụng các biện pháp để đáp ứng tiêu chuẩn</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <h4>Đánh giá & Kiểm tra</h4>
+                            <p>Thực hiện đánh giá nội bộ và khắc phục sai sót</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">6</div>
+                            <h4>Chứng nhận & Báo cáo</h4>
+                            <p>Hoàn thiện hồ sơ và cấp chứng nhận đạt tiêu chuẩn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3>Cần chứng nhận theo tiêu chuẩn riêng?</h3>
+                <p style="margin: 1rem 0;">Liên hệ ngay để nhận tư vấn miễn phí và báo giá phù hợp</p>
+                <a href="contact.html" class="btn">Liên hệ ngay</a>
+                <a href="tel:0931004818" class="btn">Gọi: 0931.004.818</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Đối tác tin cậy trong việc chứng nhận theo tiêu chuẩn khách hàng và nâng cao năng lực doanh nghiệp.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

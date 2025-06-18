@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về chúng tôi - SCI Tech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #0066cc;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Content */
+        .about-content {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #0066cc;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0066cc;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            background: #f0f0f0;
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 18px;
+            border: 2px dashed #0066cc;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-top: 3px solid #0066cc;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,102,204,0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .feature-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Stats */
+        .stats {
+            padding: 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid #ff6600;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Team */
+        .team {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #0066cc;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 3rem;
+        }
+
+        .team-name {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .team-position {
+            color: #0066cc;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .team-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Values */
+        .values {
+            padding: 80px 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            border-left: 5px solid #ff6600;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: #ff6600;
+            margin-bottom: 1rem;
+        }
+
+        .value-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .value-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e55500;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0066cc;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #0066cc;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #0066cc;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 1rem;
+            text-align: center;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid,
+            .features-grid,
+            .team-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <span class="logo-text">SCI Tech</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html" class="active">Về chúng tôi</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Về SCI Tech</h1>
+            <p>Hành trình 10 năm xây dựng và phát triển, trở thành đối tác tin cậy trong lĩnh vực kiểm nghiệm và chứng nhận</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Câu chuyện của chúng tôi</h3>
+                    <p>SCI Tech được thành lập vào năm 2014 với sứ mệnh mang đến những dịch vụ kiểm nghiệm và chứng nhận chất lượng cao nhất cho doanh nghiệp Việt Nam. Từ một phòng thí nghiệm nhỏ, chúng tôi đã phát triển thành một trong những công ty hàng đầu trong lĩnh vực này.</p>
+                    <p>Với đội ngũ chuyên gia giàu kinh nghiệm và trang thiết bị hiện đại, chúng tôi cam kết cung cấp những kết quả chính xác, đáng tin cậy và nhanh chóng. Chúng tôi tự hào đã phục vụ hàng nghìn khách hàng trên khắp cả nước.</p>
+                </div>
+                <div class="about-image">
+                    [Hình ảnh lịch sử SCI Tech]
+                </div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image">
+                    [Hình ảnh phòng lab hiện đại]
+                </div>
+                <div class="about-text">
+                    <h3>Tầm nhìn & Sứ mệnh</h3>
+                    <p><strong>Tầm nhìn:</strong> Trở thành công ty kiểm nghiệm và chứng nhận hàng đầu Đông Nam Á, góp phần nâng cao chất lượng sản phẩm và bảo vệ sức khỏe người tiêu dùng.</p>
+                    <p><strong>Sứ mệnh:</strong> Cung cấp các dịch vụ kiểm nghiệm, chứng nhận và tư vấn chuyên nghiệp, chính xác và đáng tin cậy, hỗ trợ doanh nghiệp nâng cao chất lượng sản phẩm và tuân thủ các quy chuẩn quốc tế.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Điểm mạnh của chúng tôi</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏅</div>
+                    <h4 class="feature-title">Chứng nhận ISO/IEC 17025</h4>
+                    <p class="feature-description">Phòng thí nghiệm được công nhận theo tiêu chuẩn quốc tế ISO/IEC 17025, đảm bảo chất lượng và độ tin cậy cao nhất</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🔬</div>
+                    <h4 class="feature-title">Đội ngũ chuyên gia</h4>
+                    <p class="feature-description">Hơn 50 chuyên gia với trình độ cao, kinh nghiệm nhiều năm trong lĩnh vực kiểm nghiệm và chứng nhận</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h4 class="feature-title">Trang thiết bị hiện đại</h4>
+                    <p class="feature-description">Đầu tư hệ thống máy móc, thiết bị phân tích hiện đại nhất từ các hãng nổi tiếng thế giới</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4 class="feature-title">Dịch vụ nhanh chóng</h4>
+                    <p class="feature-description">Cam kết thời gian xử lý nhanh, báo cáo kết quả chính xác và kịp thời</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h4 class="feature-title">Hỗ trợ 24/7</h4>
+                    <p class="feature-description">Đội ngũ tư vấn chuyên nghiệp, sẵn sàng hỗ trợ khách hàng mọi lúc, mọi nơi</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h4 class="feature-title">Chất lượng đảm bảo</h4>
+                    <p class="feature-description">Hệ thống quản lý chất lượng nghiêm ngặt, đảm bảo độ chính xác và tin cậy cao</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title">Thành tựu của chúng tôi</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Năm kinh nghiệm</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Chuyên gia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Mẫu kiểm nghiệm</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,000+</div>
+                    <div class="stat-label">Khách hàng tin tưởng</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Chứng nhận đã cấp</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">Khách hàng hài lòng</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">Đội ngũ lãnh đạo</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">👨‍💼</div>
+                    <h4 class="team-name">TS. Nguyễn Văn A</h4>
+                    <div class="team-position">Giám đốc điều hành</div>
+                    <p class="team-description">Hơn 15 năm kinh nghiệm trong lĩnh vực kiểm nghiệm và quản lý chất lượng. Tiến sĩ Hóa học tại Đại học Bách khoa Hà Nội.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">👩‍🔬</div>
+                    <h4 class="team-name">ThS. Trần Thị B</h4>
+                    <div class="team-position">Giám đốc kỹ thuật</div>
+                    <p class="team-description">Chuyên gia hàng đầu về kiểm nghiệm thực phẩm và môi trường. Thạc sĩ Công nghệ thực phẩm với 12 năm kinh nghiệm.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">👨‍🏫</div>
+                    <h4 class="team-name">KS. Lê Văn C</h4>
+                    <div class="team-position">Trưởng phòng Chứng nhận</div>
+                    <p class="team-description">Kỹ sư chuyên ngành với 10 năm kinh nghiệm trong lĩnh vực chứng nhận và đánh giá hệ thống quản lý chất lượng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values">
+        <div class="container">
+            <h2 class="section-title">Giá trị cốt lõi</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h4 class="value-title">Chính xác</h4>
+                    <p class="value-description">Cam kết mang đến những kết quả kiểm nghiệm chính xác nhất với độ tin cậy cao, đáp ứng mọi yêu cầu khắt khe của khách hàng.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h4 class="value-title">Nhanh chóng</h4>
+                    <p class="value-description">Tối ưu hóa quy trình làm việc để rút ngắn thời gian xử lý, đảm bảo tiến độ và hỗ trợ khách hàng kịp thời.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h4 class="value-title">Tin cậy</h4>
+                    <p class="value-description">Xây dựng mối quan hệ lâu dài với khách hàng dựa trên sự tin tưởng, minh bạch và trách nhiệm cao trong mọi hoạt động.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h4 class="value-title">Phát triển bền vững</h4>
+                    <p class="value-description">Không ngừng đổi mới, cải tiến để phát triển bền vững, góp phần bảo vệ môi trường và sức khỏe cộng đồng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Sẵn sàng hợp tác với chúng tôi?</h2>
+            <p>Hãy để SCI Tech trở thành đối tác tin cậy của bạn trong hành trình nâng cao chất lượng sản phẩm và dịch vụ</p>
+            <a href="contact.html" class="btn">Liên hệ ngay</a>
+            <a href="services.html" class="btn btn-outline">Xem dịch vụ</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-container">
+                        <img src="logo.png" alt="SCI Tech Logo" class="logo-img" style="filter: brightness(0) invert(1);">
+                        <span style="color: #0066cc; font-size: 20px; font-weight: bold;">SCI Tech</span>
+                    </div>
+                    <p style="margin-top: 1rem;">Đối tác tin cậy trong lĩnh vực kiểm nghiệm, chứng nhận và tư vấn môi trường</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Dịch vụ</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Kiểm nghiệm</a></li>
+                        <li><a href="services.html">Chứng nhận</a></li>
+                        <li><a href="services.html">Môi trường</a></li>
+                        <li><a href="services.html">Tư vấn</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Công ty</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P. Tây Thạnh, Q. Tân Phú, TP.HCM</p>
+                    <p>📞 0931.004.818</p>
+                    <p>📧 info@sci-techvn.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm nghiệm Thực phẩm - MekongLAB | Phân tích Vi sinh | Kim loại nặng | Tồn dư thuốc BVTV</title>
+    <meta name="description" content="Dịch vụ kiểm nghiệm thực phẩm chuyên nghiệp tại MekongLAB. Phân tích vi sinh vật, kim loại nặng, tồn dư thuốc BVTV, phụ gia thực phẩm theo tiêu chuẩn ISO/IEC 17025. Báo cáo có giá trị pháp lý.">
+    <meta name="keywords" content="kiểm nghiệm thực phẩm, phân tích vi sinh, kim loại nặng, tồn dư thuốc bảo vệ thực vật, phụ gia thực phẩm, MekongLAB, ISO 17025">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 40px; width: auto; }
+        .logo-text { font-size: 24px; font-weight: bold; color: #0066cc; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #0066cc; }
+        
+        .breadcrumb { background: #f8f9fa; padding: 100px 0 20px; font-size: 14px; }
+        .breadcrumb a { color: #0066cc; text-decoration: none; }
+        
+        .hero { background: linear-gradient(135deg, #0066cc 0%, #004499 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        
+        .main-content { padding: 80px 0; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2rem; color: #0066cc; text-align: center; }
+        .section-subtitle { font-size: 2rem; margin-bottom: 1.5rem; color: #333; }
+        .text-content { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+        
+        .analysis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .analysis-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); border-top: 4px solid #0066cc; }
+        .analysis-icon { font-size: 2.5rem; color: #0066cc; margin-bottom: 1rem; }
+        .analysis-title { font-size: 1.5rem; margin-bottom: 1rem; color: #333; }
+        .analysis-list { list-style: none; }
+        .analysis-list li { padding: 0.3rem 0; color: #555; position: relative; padding-left: 1.5rem; }
+        .analysis-list li:before { content: "✓"; color: #0066cc; font-weight: bold; position: absolute; left: 0; }
+        
+        .process-section { margin: 3rem 0; }
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .step-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .step-number { background: #0066cc; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; }
+        
+        .btn { display: inline-block; background: #ff6600; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin: 10px; font-weight: bold; transition: background 0.3s ease; }
+        .btn:hover { background: #e55a00; }
+        
+        footer { background: #333; color: white; padding: 3rem 0 1rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; }
+        .footer-section p, .footer-section a { color: #ccc; text-decoration: none; line-height: 1.6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #555; color: #ccc; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .analysis-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > <a href="services.html#testing">Kiểm nghiệm</a> > Kiểm nghiệm Thực phẩm
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Kiểm nghiệm Thực phẩm</h1>
+            <p>Kiểm nghiệm các chỉ tiêu hóa học và vi sinh trên thực phẩm theo tiêu chuẩn quốc tế</p>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="text-content">
+                <h2 class="section-title">Dịch vụ kiểm nghiệm thực phẩm</h2>
+                <p>MekongLAB cung cấp dịch vụ kiểm nghiệm thực phẩm toàn diện với hơn 500 chỉ tiêu phân tích, đáp ứng mọi yêu cầu từ kiểm tra chất lượng đến xuất khẩu quốc tế.</p>
+            </div>
+
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <div class="analysis-icon">🦠</div>
+                    <h3 class="analysis-title">Phân tích vi sinh vật</h3>
+                    <ul class="analysis-list">
+                        <li>E.coli, Salmonella, Listeria...</li>
+                        <li>Kiểm tra chất bảo quản và phụ gia</li>
+                        <li>Phân tích kim loại nặng (Pb, Cd, Hg, As...)</li>
+                        <li>Dư lượng thuốc bảo vệ thực vật</li>
+                        <li>Thành phần dinh dưỡng</li>
+                        <li>Chất cấm trong thực phẩm</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="testing-food.html" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <div class="analysis-icon">🐟</div>
+                    <h3 class="analysis-title">Kiểm nghiệm Thủy sản</h3>
+                    <ul class="analysis-list">
+                        <li>Vi sinh vật gây bệnh</li>
+                        <li>Kháng sinh và hóa chất cấm</li>
+                        <li>Kim loại nặng</li>
+                        <li>Độ tươi (TVB-N, Histamine)</li>
+                        <li>Chất lượng nước nuôi</li>
+                        <li>Sulfite trong tôm đông lạnh</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="testing-seafood.html" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <div class="analysis-icon">🌾</div>
+                    <h3 class="analysis-title">Kiểm nghiệm Nông sản</h3>
+                    <ul class="analysis-list">
+                        <li>Dư lượng thuốc bảo vệ thực vật</li>
+                        <li>Độ ẩm, tạp chất</li>
+                        <li>Aflatoxin và mycotoxin</li>
+                        <li>Kim loại nặng</li>
+                        <li>Chất lượng hạt (protein, tinh bột...)</li>
+                        <li>GMO (biến đổi gen)</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="testing-agriculture.html" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <div class="analysis-icon">🐄</div>
+                    <h3 class="analysis-title">Thức ăn Chăn nuôi & Thủy sản</h3>
+                    <ul class="analysis-list">
+                        <li>Thành phần dinh dưỡng (protein, lipid, xơ...)</li>
+                        <li>Mycotoxin (Aflatoxin, DON, ZEA...)</li>
+                        <li>Vi sinh vật (Salmonella, E.coli...)</li>
+                        <li>Kháng sinh và chất cấm</li>
+                        <li>Kim loại nặng</li>
+                        <li>Chất phụ gia thức ăn</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="testing-feed.html" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <div class="analysis-icon">🌱</div>
+                    <h3 class="analysis-title">Kiểm nghiệm Phân bón</h3>
+                    <ul class="analysis-list">
+                        <li>Thành phần dinh dưỡng (N, P, K)</li>
+                        <li>Vi lượng (Fe, Mn, Zn, Cu, B, Mo...)</li>
+                        <li>Kim loại nặng</li>
+                        <li>Độ ẩm, pH</li>
+                        <li>Chất hữu cơ</li>
+                        <li>Vi sinh vật có hại</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="testing-fertilizer.html" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <div class="analysis-icon">🌍</div>
+                    <h3 class="analysis-title">Kiểm nghiệm Môi trường</h3>
+                    <ul class="analysis-list">
+                        <li>Nước thải, nước mặt, nước ngầm</li>
+                        <li>Không khí xung quanh, khí thải</li>
+                        <li>Đất nông nghiệp, đất ô nhiễm</li>
+                        <li>Tiếng ồn, độ rung</li>
+                        <li>Chất thải rắn</li>
+                        <li>Bụi lắng, bụi tổng</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="testing-environment.html" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-section">
+                <h3 class="section-title">Quy trình kiểm nghiệm</h3>
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h4>Tiếp nhận yêu cầu</h4>
+                        <p>Tư vấn chỉ tiêu và phương pháp phân tích</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h4>Lấy mẫu</h4>
+                        <p>Lấy mẫu đại diện theo quy định</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h4>Chuẩn bị mẫu</h4>
+                        <p>Xử lý mẫu trước khi phân tích</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h4>Phân tích</h4>
+                        <p>Phân tích bằng thiết bị hiện đại</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <h4>Kiểm tra</h4>
+                        <p>Kiểm tra chất lượng kết quả</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">6</div>
+                        <h4>Báo cáo</h4>
+                        <p>Phát hành báo cáo kết quả</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3>Cần dịch vụ kiểm nghiệm?</h3>
+                <p style="margin: 1rem 0;">Liên hệ ngay để được tư vấn và báo giá tốt nhất</p>
+                <a href="contact.html" class="btn">Liên hệ ngay</a>
+                <a href="tel:0931004818" class="btn">Gọi: 0931.004.818</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Công ty hàng đầu về dịch vụ kiểm nghiệm, chứng nhận và giám định tại Việt Nam.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

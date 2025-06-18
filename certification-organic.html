@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chứng nhận Hữu cơ - USDA Organic | EU Organic | JAS | Nông sản hữu cơ</title>
+    <meta name="description" content="Dịch vụ chứng nhận hữu cơ chuyên nghiệp. Tư vấn USDA Organic, EU Organic, JAS, hỗ trợ doanh nghiệp đạt chứng nhận nông sản hữu cơ quốc tế.">
+    <meta name="keywords" content="chứng nhận hữu cơ, USDA Organic, EU Organic, JAS, nông sản hữu cơ, thực phẩm hữu cơ">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 40px; width: auto; }
+        .logo-text { font-size: 24px; font-weight: bold; color: #0066cc; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #0066cc; }
+        
+        .breadcrumb { background: #f8f9fa; padding: 100px 0 20px; font-size: 14px; }
+        .breadcrumb a { color: #0066cc; text-decoration: none; }
+        
+        .hero { background: linear-gradient(135deg, #8bc34a 0%, #4caf50 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        
+        .main-content { padding: 80px 0; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2rem; color: #4caf50; text-align: center; }
+        .text-content { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+        
+        .certification-types { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .certification-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); border-top: 4px solid #4caf50; }
+        .certification-icon { font-size: 3rem; color: #4caf50; margin-bottom: 1rem; text-align: center; }
+        .certification-title { font-size: 1.5rem; margin-bottom: 1rem; color: #333; text-align: center; }
+        .certification-description { color: #666; margin-bottom: 1.5rem; text-align: center; }
+        .certification-list { list-style: none; }
+        .certification-list li { padding: 0.3rem 0; color: #555; position: relative; padding-left: 1.5rem; }
+        .certification-list li:before { content: "✓"; color: #4caf50; font-weight: bold; position: absolute; left: 0; }
+        
+        .process-section { background: #f8f9fa; padding: 3rem 0; margin: 3rem 0; }
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .step-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .step-number { background: #4caf50; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; }
+        
+        .products-section { margin: 3rem 0; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .product-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .product-icon { font-size: 2rem; margin-bottom: 1rem; }
+        
+        .btn { display: inline-block; background: #ff6600; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin: 10px; font-weight: bold; transition: background 0.3s ease; }
+        .btn:hover { background: #e55a00; }
+        
+        footer { background: #333; color: white; padding: 3rem 0 1rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; }
+        .footer-section p, .footer-section a { color: #ccc; text-decoration: none; line-height: 1.6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #555; color: #ccc; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .certification-types { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > <a href="services.html#certification">Chứng nhận</a> > Chứng nhận Hữu cơ
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Chứng nhận Hữu cơ</h1>
+            <p>Dịch vụ tư vấn và hỗ trợ chứng nhận hữu cơ chuyên nghiệp. Giúp doanh nghiệp đạt các tiêu chuẩn hữu cơ quốc tế như USDA Organic, EU Organic và JAS.</p>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="text-content">
+                <h2 class="section-title">Các loại chứng nhận hữu cơ</h2>
+                <p>SCI Tech cung cấp dịch vụ tư vấn toàn diện cho các tiêu chuẩn hữu cơ khác nhau trên toàn cầu, giúp doanh nghiệp tiếp cận thị trường quốc tế và nâng cao giá trị sản phẩm.</p>
+            </div>
+
+            <div class="certification-types">
+                <div class="certification-card">
+                    <div class="certification-icon">🇺🇸</div>
+                    <h3 class="certification-title">USDA Organic</h3>
+                    <p class="certification-description">Chứng nhận hữu cơ Hoa Kỳ</p>
+                    <ul class="certification-list">
+                        <li>Áp dụng tiêu chuẩn NOP</li>
+                        <li>Không sử dụng phân bón hóa học</li>
+                        <li>Không sử dụng thuốc BVTV tổng hợp</li>
+                        <li>Không biến đổi gen (GMO)</li>
+                        <li>Không chiếu xạ sản phẩm</li>
+                        <li>Thời gian chuyển đổi 3 năm</li>
+                    </ul>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">🇪🇺</div>
+                    <h3 class="certification-title">EU Organic</h3>
+                    <p class="certification-description">Chứng nhận hữu cơ Liên minh Châu Âu</p>
+                    <ul class="certification-list">
+                        <li>Tuân thủ quy định 2018/848</li>
+                        <li>Bảo vệ đa dạng sinh học</li>
+                        <li>Sử dụng nguồn lực có trách nhiệm</li>
+                        <li>Phúc lợi động vật cao</li>
+                        <li>Không sử dụng thuốc trừ sâu</li>
+                        <li>Thời gian chuyển đổi 2-3 năm</li>
+                    </ul>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">🇯🇵</div>
+                    <h3 class="certification-title">JAS Organic</h3>
+                    <p class="certification-description">Chứng nhận hữu cơ Nhật Bản</p>
+                    <ul class="certification-list">
+                        <li>Tiêu chuẩn nông nghiệp Nhật Bản</li>
+                        <li>Quản lý đất bền vững</li>
+                        <li>Không sử dụng hóa chất</li>
+                        <li>Hệ thống quản lý chất lượng</li>
+                        <li>Ghi chép chi tiết</li>
+                        <li>Kiểm tra định kỳ hàng năm</li>
+                    </ul>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">🇻🇳</div>
+                    <h3 class="certification-title">Hữu cơ Việt Nam</h3>
+                    <p class="certification-description">Chứng nhận theo TCVN 11041:2017</p>
+                    <ul class="certification-list">
+                        <li>Tuân thủ Nghị định 109/2018/NĐ-CP</li>
+                        <li>Không sử dụng phân hóa học</li>
+                        <li>Không sử dụng thuốc BVTV tổng hợp</li>
+                        <li>Không GMO</li>
+                        <li>Thời gian chuyển đổi 2 năm</li>
+                        <li>Kiểm tra giám sát định kỳ</li>
+                    </ul>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">🇨🇭</div>
+                    <h3 class="certification-title">Bio Suisse</h3>
+                    <p class="certification-description">Chứng nhận hữu cơ Thụy Sĩ</p>
+                    <ul class="certification-list">
+                        <li>Tiêu chuẩn nghiêm ngặt nhất</li>
+                        <li>Quản lý trang trại toàn diện</li>
+                        <li>Đa dạng sinh học cao</li>
+                        <li>Phúc lợi động vật nghiêm ngặt</li>
+                        <li>Không vận chuyển bằng đường hàng không</li>
+                        <li>Chuyển đổi toàn bộ trang trại</li>
+                    </ul>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">🌏</div>
+                    <h3 class="certification-title">IFOAM</h3>
+                    <p class="certification-description">Liên đoàn Quốc tế về Phong trào Nông nghiệp Hữu cơ</p>
+                    <ul class="certification-list">
+                        <li>Tiêu chuẩn hữu cơ quốc tế</li>
+                        <li>Bốn nguyên tắc: sức khỏe, sinh thái, công bằng, chăm sóc</li>
+                        <li>Công nhận tương đương</li>
+                        <li>Hệ thống đảm bảo có sự tham gia</li>
+                        <li>Phát triển bền vững</li>
+                        <li>Tiếp cận thị trường toàn cầu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="process-section">
+                <div class="container">
+                    <h3 class="section-title">Quy trình chứng nhận hữu cơ</h3>
+                    <div class="process-steps">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <h4>Đánh giá ban đầu</h4>
+                            <p>Phân tích hiện trạng và xác định tiêu chuẩn phù hợp</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <h4>Lập kế hoạch</h4>
+                            <p>Xây dựng lộ trình chuyển đổi sang hữu cơ</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <h4>Chuyển đổi</h4>
+                            <p>Thực hiện quy trình sản xuất hữu cơ trong thời gian quy định</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <h4>Hồ sơ đăng ký</h4>
+                            <p>Chuẩn bị và nộp hồ sơ đăng ký chứng nhận</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <h4>Đánh giá</h4>
+                            <p>Tổ chức chứng nhận tiến hành đánh giá tại chỗ</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">6</div>
+                            <h4>Cấp chứng nhận</h4>
+                            <p>Nhận chứng nhận và duy trì hàng năm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-section">
+                <h3 class="section-title">Sản phẩm được chứng nhận hữu cơ</h3>
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-icon">🌾</div>
+                        <h4>Ngũ cốc</h4>
+                        <p>Gạo, ngô, lúa mì</p>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-icon">🥕</div>
+                        <h4>Rau củ</h4>
+                        <p>Rau xanh, củ quả</p>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-icon">🍎</div>
+                        <h4>Trái cây</h4>
+                        <p>Táo, chuối, cam</p>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-icon">☕</div>
+                        <h4>Đồ uống</h4>
+                        <p>Cà phê, chè, nước ép</p>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-icon">🥩</div>
+                        <h4>Thịt</h4>
+                        <p>Thịt bò, gà, heo hữu cơ</p>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-icon">🍯</div>
+                        <h4>Thực phẩm chế biến</h4>
+                        <p>Mật ong, đường, dầu</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3>Cần tư vấn chứng nhận hữu cơ?</h3>
+                <p style="margin: 1rem 0;">Liên hệ ngay để được hỗ trợ chuyên nghiệp</p>
+                <a href="contact.html" class="btn">Liên hệ ngay</a>
+                <a href="tel:0931004818" class="btn">Gọi: 0931.004.818</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Đối tác tin cậy trong việc tư vấn và hỗ trợ chứng nhận hữu cơ cho doanh nghiệp Việt Nam.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

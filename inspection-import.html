@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra Nhà nước về Hàng nhập khẩu | Thông quan hàng hóa | SCI Tech Vietnam</title>
+    <meta name="description" content="Dịch vụ kiểm tra nhà nước về hàng hóa nhập khẩu. Hỗ trợ thông quan nhanh chóng, tuân thủ quy định và giải quyết vướng mắc trong quá trình nhập khẩu.">
+    <meta name="keywords" content="kiểm tra nhà nước, hàng nhập khẩu, thông quan hàng hóa, giấy chứng nhận kiểm tra, thực phẩm nhập khẩu">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 40px; width: auto; }
+        .logo-text { font-size: 24px; font-weight: bold; color: #0066cc; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #0066cc; }
+        
+        .breadcrumb { background: #f8f9fa; padding: 100px 0 20px; font-size: 14px; }
+        .breadcrumb a { color: #0066cc; text-decoration: none; }
+        
+        .hero { background: linear-gradient(135deg, #0275d8 0%, #01579b 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        
+        .main-content { padding: 80px 0; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2rem; color: #0275d8; text-align: center; }
+        .text-content { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+        
+        .inspection-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .inspection-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); border-top: 4px solid #0275d8; }
+        .inspection-icon { font-size: 3rem; color: #0275d8; margin-bottom: 1rem; text-align: center; }
+        .inspection-title { font-size: 1.5rem; margin-bottom: 1rem; color: #333; text-align: center; }
+        .inspection-description { color: #666; margin-bottom: 1.5rem; text-align: center; }
+        .inspection-list { list-style: none; }
+        .inspection-list li { padding: 0.3rem 0; color: #555; position: relative; padding-left: 1.5rem; }
+        .inspection-list li:before { content: "✓"; color: #0275d8; font-weight: bold; position: absolute; left: 0; }
+        
+        .agencies-section { background: #f8f9fa; padding: 3rem 0; margin: 3rem 0; }
+        .agencies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .agency-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .agency-icon { font-size: 2rem; color: #0275d8; margin-bottom: 1rem; }
+        
+        .preparation-section { margin: 3rem 0; }
+        .preparation-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .step-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .step-number { background: #0275d8; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; }
+        
+        .btn { display: inline-block; background: #ff6600; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin: 10px; font-weight: bold; transition: background 0.3s ease; }
+        .btn:hover { background: #e55a00; }
+        
+        footer { background: #333; color: white; padding: 3rem 0 1rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; }
+        .footer-section p, .footer-section a { color: #ccc; text-decoration: none; line-height: 1.6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #555; color: #ccc; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .inspection-areas { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > <a href="inspection-services.html">Giám định</a> > Kiểm tra Nhà nước về Hàng nhập khẩu
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Kiểm tra Nhà nước về Hàng nhập khẩu</h1>
+            <p>Dịch vụ kiểm tra nhà nước về hàng hóa nhập khẩu theo ủy quyền của các Bộ. Hỗ trợ thông quan nhanh chóng, tuân thủ quy định và giải quyết vướng mắc trong quá trình nhập khẩu.</p>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="text-content">
+                <h2 class="section-title">Các lĩnh vực kiểm tra nhà nước</h2>
+                <p>SCI Tech cung cấp dịch vụ kiểm tra nhà nước về hàng hóa nhập khẩu theo ủy quyền của các Bộ, đảm bảo hàng hóa đáp ứng các quy chuẩn kỹ thuật và quy định pháp luật Việt Nam.</p>
+            </div>
+
+            <div class="inspection-areas">
+                <div class="inspection-card">
+                    <div class="inspection-icon">🍎</div>
+                    <h3 class="inspection-title">Thực phẩm nhập khẩu</h3>
+                    <p class="inspection-description">Kiểm tra an toàn thực phẩm nhập khẩu</p>
+                    <ul class="inspection-list">
+                        <li>Thực phẩm chế biến đóng gói</li>
+                        <li>Nguyên liệu thực phẩm</li>
+                        <li>Phụ gia thực phẩm</li>
+                        <li>Thực phẩm chức năng</li>
+                        <li>Đồ uống và nước giải khát</li>
+                        <li>Thực phẩm đông lạnh</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🐄</div>
+                    <h3 class="inspection-title">Nguyên liệu thức ăn chăn nuôi</h3>
+                    <p class="inspection-description">Kiểm tra chất lượng thức ăn chăn nuôi nhập khẩu</p>
+                    <ul class="inspection-list">
+                        <li>Nguyên liệu thức ăn chăn nuôi</li>
+                        <li>Thức ăn hỗn hợp hoàn chỉnh</li>
+                        <li>Thức ăn đậm đặc (premix)</li>
+                        <li>Chất bổ sung thức ăn</li>
+                        <li>Phụ gia thức ăn chăn nuôi</li>
+                        <li>Chế phẩm sinh học</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🐟</div>
+                    <h3 class="inspection-title">Thức ăn thủy sản nhập khẩu</h3>
+                    <p class="inspection-description">Kiểm tra chất lượng thức ăn thủy sản</p>
+                    <ul class="inspection-list">
+                        <li>Thức ăn cho cá</li>
+                        <li>Thức ăn cho tôm</li>
+                        <li>Thức ăn cho các loài thủy sản khác</li>
+                        <li>Phụ gia thức ăn thủy sản</li>
+                        <li>Chất bổ sung dinh dưỡng</li>
+                        <li>Chế phẩm vi sinh</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🌱</div>
+                    <h3 class="inspection-title">Phân bón nhập khẩu</h3>
+                    <p class="inspection-description">Kiểm tra chất lượng phân bón nhập khẩu</p>
+                    <ul class="inspection-list">
+                        <li>Phân vô cơ (NPK, DAP, Ure...)</li>
+                        <li>Phân hữu cơ</li>
+                        <li>Phân bón lá</li>
+                        <li>Phân vi sinh</li>
+                        <li>Chất điều hòa sinh trưởng</li>
+                        <li>Phân bón chuyên dụng</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🧪</div>
+                    <h3 class="inspection-title">Hóa chất và chế phẩm</h3>
+                    <p class="inspection-description">Kiểm tra hóa chất và chế phẩm nhập khẩu</p>
+                    <ul class="inspection-list">
+                        <li>Hóa chất công nghiệp</li>
+                        <li>Hóa chất xử lý môi trường</li>
+                        <li>Chế phẩm diệt khuẩn</li>
+                        <li>Chất bảo quản</li>
+                        <li>Hóa chất chuyên dụng</li>
+                        <li>Hóa chất thí nghiệm</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">📝</div>
+                    <h3 class="inspection-title">Cấp giấy chứng nhận</h3>
+                    <p class="inspection-description">Cấp giấy chứng nhận kiểm tra nhà nước</p>
+                    <ul class="inspection-list">
+                        <li>Giấy chứng nhận kiểm tra</li>
+                        <li>Giấy xác nhận chất lượng</li>
+                        <li>Giấy chứng nhận hợp quy</li>
+                        <li>Giấy phép nhập khẩu</li>
+                        <li>Giấy xác nhận khai báo</li>
+                        <li>Báo cáo kết quả kiểm tra</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="agencies-section">
+                <div class="container">
+                    <h3 class="section-title">Các cơ quan quản lý</h3>
+                    <div class="agencies-grid">
+                        <div class="agency-item">
+                            <div class="agency-icon">🌾</div>
+                            <h4>Bộ Nông nghiệp & PTNT</h4>
+                            <p>Nông sản, thủy sản, thức ăn chăn nuôi</p>
+                        </div>
+                        <div class="agency-item">
+                            <div class="agency-icon">🏭</div>
+                            <h4>Bộ Công Thương</h4>
+                            <p>Hàng hóa công nghiệp, hóa chất</p>
+                        </div>
+                        <div class="agency-item">
+                            <div class="agency-icon">🏥</div>
+                            <h4>Bộ Y Tế</h4>
+                            <p>Thực phẩm, mỹ phẩm, thiết bị y tế</p>
+                        </div>
+                        <div class="agency-item">
+                            <div class="agency-icon">🌍</div>
+                            <h4>Bộ TN&MT</h4>
+                            <p>Hóa chất môi trường, chất thải</p>
+                        </div>
+                        <div class="agency-item">
+                            <div class="agency-icon">🔬</div>
+                            <h4>Bộ KHCN</h4>
+                            <p>Thiết bị khoa học, hàng hóa kỹ thuật</p>
+                        </div>
+                        <div class="agency-item">
+                            <div class="agency-icon">🛃</div>
+                            <h4>Hải quan</h4>
+                            <p>Thông quan hàng hóa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preparation-section">
+                <h3 class="section-title">Quy trình kiểm tra nhà nước</h3>
+                <div class="preparation-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h4>Đăng ký kiểm tra</h4>
+                        <p>Nộp hồ sơ đăng ký kiểm tra nhà nước</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h4>Kiểm tra hồ sơ</h4>
+                        <p>Xem xét tính đầy đủ và hợp lệ của hồ sơ</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h4>Lấy mẫu kiểm nghiệm</h4>
+                        <p>Lấy mẫu đại diện cho lô hàng</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h4>Phân tích mẫu</h4>
+                        <p>Phân tích các chỉ tiêu theo quy chuẩn</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <h4>Đánh giá kết quả</h4>
+                        <p>Đánh giá sự phù hợp với quy chuẩn</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">6</div>
+                        <h4>Cấp giấy chứng nhận</h4>
+                        <p>Cấp giấy chứng nhận kiểm tra nhà nước</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3>Cần hỗ trợ kiểm tra hàng nhập khẩu?</h3>
+                <p style="margin: 1rem 0;">Liên hệ ngay để được tư vấn và hỗ trợ thông quan nhanh chóng</p>
+                <a href="contact.html" class="btn">Liên hệ ngay</a>
+                <a href="tel:0931004818" class="btn">Gọi: 0931.004.818</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Đơn vị được ủy quyền kiểm tra nhà nước về hàng hóa nhập khẩu, hỗ trợ doanh nghiệp thông quan nhanh chóng và tuân thủ quy định.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

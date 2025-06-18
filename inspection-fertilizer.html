@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh tra Kiểm tra Phân bón - Cơ sở sản xuất | Chất lượng phân bón | QCVN | NPK</title>
+    <meta name="description" content="Dịch vụ thanh tra kiểm tra phân bón chuyên nghiệp. Đánh giá cơ sở sản xuất, chất lượng phân bón NPK, hữu cơ, vi sinh, tuân thủ QCVN.">
+    <meta name="keywords" content="thanh tra phân bón, kiểm tra phân bón, NPK, phân hữu cơ, phân vi sinh, QCVN, chất lượng phân bón">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 40px; width: auto; }
+        .logo-text { font-size: 24px; font-weight: bold; color: #0066cc; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #0066cc; }
+        
+        .breadcrumb { background: #f8f9fa; padding: 100px 0 20px; font-size: 14px; }
+        .breadcrumb a { color: #0066cc; text-decoration: none; }
+        
+        .hero { background: linear-gradient(135deg, #795548 0%, #8bc34a 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        
+        .main-content { padding: 80px 0; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2rem; color: #795548; text-align: center; }
+        .text-content { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+        
+        .inspection-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .inspection-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); border-top: 4px solid #795548; }
+        .inspection-icon { font-size: 3rem; color: #795548; margin-bottom: 1rem; text-align: center; }
+        .inspection-title { font-size: 1.5rem; margin-bottom: 1rem; color: #333; text-align: center; }
+        .inspection-description { color: #666; margin-bottom: 1.5rem; text-align: center; }
+        .inspection-list { list-style: none; }
+        .inspection-list li { padding: 0.3rem 0; color: #555; position: relative; padding-left: 1.5rem; }
+        .inspection-list li:before { content: "✓"; color: #795548; font-weight: bold; position: absolute; left: 0; }
+        
+        .standards-section { background: #f8f9fa; padding: 3rem 0; margin: 3rem 0; }
+        .standards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .standard-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .standard-icon { font-size: 2rem; color: #795548; margin-bottom: 1rem; }
+        
+        .fertilizer-types { margin: 3rem 0; }
+        .types-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .type-item { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .type-icon { font-size: 2rem; margin-bottom: 1rem; }
+        
+        .btn { display: inline-block; background: #ff6600; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin: 10px; font-weight: bold; transition: background 0.3s ease; }
+        .btn:hover { background: #e55a00; }
+        
+        footer { background: #333; color: white; padding: 3rem 0 1rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; }
+        .footer-section p, .footer-section a { color: #ccc; text-decoration: none; line-height: 1.6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #555; color: #ccc; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .inspection-areas { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > <a href="services.html#inspection">Thanh tra</a> > Thanh tra Phân bón
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Thanh tra Kiểm tra Phân bón</h1>
+            <p>Dịch vụ thanh tra kiểm tra phân bón chuyên nghiệp. Đảm bảo chất lượng phân bón NPK, hữu cơ, vi sinh theo quy chuẩn kỹ thuật quốc gia và tiêu chuẩn quốc tế.</p>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="text-content">
+                <h2 class="section-title">Các lĩnh vực thanh tra phân bón</h2>
+                <p>SCI Tech cung cấp dịch vụ thanh tra toàn diện cho ngành phân bón, từ cơ sở sản xuất đến cửa hàng bán lẻ, đảm bảo chất lượng và an toàn cho nông nghiệp.</p>
+            </div>
+
+            <div class="inspection-areas">
+                <div class="inspection-card">
+                    <div class="inspection-icon">🏭</div>
+                    <h3 class="inspection-title">Nhà máy sản xuất</h3>
+                    <p class="inspection-description">Thanh tra cơ sở sản xuất phân bón</p>
+                    <ul class="inspection-list">
+                        <li>Cơ sở vật chất sản xuất</li>
+                        <li>Thiết bị và dây chuyền</li>
+                        <li>Quy trình sản xuất</li>
+                        <li>Kiểm soát chất lượng</li>
+                        <li>Vệ sinh an toàn lao động</li>
+                        <li>Quản lý chất thải</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">📦</div>
+                    <h3 class="inspection-title">Kho nguyên liệu</h3>
+                    <p class="inspection-description">Kiểm tra kho bảo quản nguyên liệu</p>
+                    <ul class="inspection-list">
+                        <li>Điều kiện bảo quản</li>
+                        <li>Phân loại nguyên liệu</li>
+                        <li>Vệ sinh kho bãi</li>
+                        <li>Phòng cháy chữa cháy</li>
+                        <li>Ghi chép xuất nhập kho</li>
+                        <li>Kiểm soát tồn kho</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🔬</div>
+                    <h3 class="inspection-title">Phòng thí nghiệm</h3>
+                    <p class="inspection-description">Thanh tra phòng lab kiểm tra chất lượng</p>
+                    <ul class="inspection-list">
+                        <li>Thiết bị phân tích</li>
+                        <li>Quy trình kiểm nghiệm</li>
+                        <li>Lấy mẫu đại diện</li>
+                        <li>Ghi chép kết quả</li>
+                        <li>Hiệu chuẩn thiết bị</li>
+                        <li>Năng lực kỹ thuật viên</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">⚗️</div>
+                    <h3 class="inspection-title">Quy trình trộn phối</h3>
+                    <p class="inspection-description">Kiểm tra quy trình pha chế phân bón</p>
+                    <ul class="inspection-list">
+                        <li>Công thức phân bón</li>
+                        <li>Tỷ lệ trộn chính xác</li>
+                        <li>Thời gian trộn đều</li>
+                        <li>Kiểm tra độ đồng nhất</li>
+                        <li>Bao bì và đóng gói</li>
+                        <li>Ghi nhãn sản phẩm</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🚚</div>
+                    <h3 class="inspection-title">Vận chuyển phân phối</h3>
+                    <p class="inspection-description">Thanh tra hệ thống logistics</p>
+                    <ul class="inspection-list">
+                        <li>Phương tiện vận chuyển</li>
+                        <li>Bảo quản trong vận chuyển</li>
+                        <li>Vệ sinh xe tải</li>
+                        <li>Phòng tránh ô nhiễm</li>
+                        <li>Ghi chép vận chuyển</li>
+                        <li>Thời gian giao hàng</li>
+                    </ul>
+                </div>
+
+                <div class="inspection-card">
+                    <div class="inspection-icon">🏪</div>
+                    <h3 class="inspection-title">Cửa hàng bán lẻ</h3>
+                    <p class="inspection-description">Kiểm tra cơ sở kinh doanh phân bón</p>
+                    <ul class="inspection-list">
+                        <li>Điều kiện bảo quản</li>
+                        <li>Phân loại sản phẩm</li>
+                        <li>Nhãn mác và xuất xứ</li>
+                        <li>Hạn sử dụng</li>
+                        <li>Vệ sinh cửa hàng</li>
+                        <li>Tư vấn kỹ thuật</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="standards-section">
+                <div class="container">
+                    <h3 class="section-title">Quy chuẩn và tiêu chuẩn</h3>
+                    <div class="standards-grid">
+                        <div class="standard-item">
+                            <div class="standard-icon">📋</div>
+                            <h4>QCVN 01-56:2011</h4>
+                            <p>Quy chuẩn kỹ thuật quốc gia về phân bón</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🌱</div>
+                            <h4>TCVN 8467:2010</h4>
+                            <p>Tiêu chuẩn phân bón hữu cơ</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🧪</div>
+                            <h4>TCVN 6638:2018</h4>
+                            <p>Phân bón NPK tạo hạt</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🦠</div>
+                            <h4>TCVN 9208:2012</h4>
+                            <p>Phân bón vi sinh</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">💧</div>
+                            <h4>TCVN 9209:2012</h4>
+                            <p>Phân bón lá</p>
+                        </div>
+                        <div class="standard-item">
+                            <div class="standard-icon">🌍</div>
+                            <h4>ISO 17025</h4>
+                            <p>Tiêu chuẩn phòng thí nghiệm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fertilizer-types">
+                <h3 class="section-title">Các loại phân bón được thanh tra</h3>
+                <div class="types-grid">
+                    <div class="type-item">
+                        <div class="type-icon">🧪</div>
+                        <h4>Phân NPK</h4>
+                        <p>Phân bón tổng hợp</p>
+                    </div>
+                    <div class="type-item">
+                        <div class="type-icon">🌱</div>
+                        <h4>Phân hữu cơ</h4>
+                        <p>Phân compost, phân chuồng</p>
+                    </div>
+                    <div class="type-item">
+                        <div class="type-icon">🦠</div>
+                        <h4>Phân vi sinh</h4>
+                        <p>Vi khuẩn có ích</p>
+                    </div>
+                    <div class="type-item">
+                        <div class="type-icon">💧</div>
+                        <h4>Phân lá</h4>
+                        <p>Phân bón qua lá</p>
+                    </div>
+                    <div class="type-item">
+                        <div class="type-icon">⚡</div>
+                        <h4>Phân vi lượng</h4>
+                        <p>Kẽm, sắt, mangan</p>
+                    </div>
+                    <div class="type-item">
+                        <div class="type-icon">🌿</div>
+                        <h4>Phân chuyên dụng</h4>
+                        <p>Phân cho từng loại cây</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3>Cần dịch vụ thanh tra phân bón?</h3>
+                <p style="margin: 1rem 0;">Liên hệ ngay để đảm bảo chất lượng và tuân thủ quy định</p>
+                <a href="contact.html" class="btn">Liên hệ ngay</a>
+                <a href="tel:0931004818" class="btn">Gọi: 0931.004.818</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Đối tác tin cậy trong việc thanh tra phân bón, đảm bảo chất lượng cho nông nghiệp bền vững.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

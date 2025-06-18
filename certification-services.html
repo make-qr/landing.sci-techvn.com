@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ Chứng nhận ISO | Chứng nhận An toàn Thực phẩm | Chứng nhận Hữu cơ</title>
+    <meta name="description" content="Dịch vụ chứng nhận chuyên nghiệp: ISO 9001, ISO 14001, ISO 22000, HACCP, GMP, Halal, Organic (US NOP, EU, Japan JAS), GlobalGAP, VietGAP. Đội ngũ chuyên gia giàu kinh nghiệm, quy trình nhanh chóng.">
+    <meta name="keywords" content="chứng nhận ISO, chứng nhận HACCP, chứng nhận GMP, chứng nhận Halal, chứng nhận hữu cơ, GlobalGAP, VietGAP, ISO 9001, ISO 14001, ISO 22000">
+    <link rel="canonical" href="https://landing.sci-techvn.com/certification-services.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f8f9fa;
+            padding: 100px 0 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6600;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #0066cc;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Certification Categories */
+        .cert-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #0066cc;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,102,204,0.2);
+        }
+
+        .cert-icon {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        .cert-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .cert-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-standards {
+            list-style: none;
+        }
+
+        .cert-standards li {
+            padding: 0.3rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .cert-standards li:before {
+            content: "✓";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .btn-detail {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-detail:hover {
+            background: #004499;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            background: #0066cc;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .step-description {
+            color: #666;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 4rem 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-question:after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            font-size: 1.5rem;
+            color: #0066cc;
+        }
+
+        .faq-question.active:after {
+            content: "-";
+        }
+
+        .faq-answer {
+            padding: 0 0 1rem 0;
+            color: #666;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e55a00;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0066cc;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #0066cc;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cert-categories,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="SCI Tech Logo" class="logo-img">
+                <div class="logo-text">SCI Tech</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a> > <a href="services.html">Dịch vụ</a> > Dịch vụ Chứng nhận
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Dịch vụ Chứng nhận Chuyên nghiệp</h1>
+            <p>Cung cấp dịch vụ chứng nhận toàn diện theo các tiêu chuẩn quốc tế và trong nước. Đội ngũ chuyên gia giàu kinh nghiệm, quy trình nhanh chóng, chi phí hợp lý.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Tiêu chuẩn chứng nhận</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Khách hàng tin tưởng</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Năm kinh nghiệm</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="content-section">
+                <h2 class="section-title">Đối tác tin cậy trong chứng nhận</h2>
+                <div class="text-content">
+                    <p><strong>SCI Tech Vietnam</strong> là đơn vị hàng đầu cung cấp dịch vụ chứng nhận chuyên nghiệp tại Việt Nam. Chúng tôi hỗ trợ doanh nghiệp đạt được các chứng nhận quan trọng để nâng cao uy tín, mở rộng thị trường và đảm bảo tuân thủ các quy định pháp luật.</p>
+                    
+                    <p>Với đội ngũ chuyên gia giàu kinh nghiệm và quy trình làm việc chuyên nghiệp, chúng tôi cam kết mang đến dịch vụ chứng nhận chất lượng cao, tiết kiệm thời gian và chi phí cho khách hàng.</p>
+                </div>
+            </div>
+
+            <!-- Certification Categories -->
+            <div class="content-section">
+                <h2 class="section-subtitle">Các lĩnh vực chứng nhận chuyên sâu</h2>
+                <div class="cert-categories">
+                    <div class="cert-card">
+                        <div class="cert-icon">🏆</div>
+                        <h3 class="cert-title">Chứng nhận ISO</h3>
+                        <p class="cert-description">Hệ thống quản lý chất lượng ISO 9001, ISO 14001, ISO 22000, ISO 45001, ISO 27001</p>
+                        <a href="certification-iso.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🍽️</div>
+                        <h3 class="cert-title">Chứng nhận An toàn thực phẩm</h3>
+                        <p class="cert-description">HACCP, BRC, IFS, FSSC 22000, GlobalGAP, VietGAP</p>
+                        <a href="certification-haccp.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🌱</div>
+                        <h3 class="cert-title">Chứng nhận Hữu cơ</h3>
+                        <p class="cert-description">USDA Organic, EU Organic, JAS Organic, Vietnam Organic</p>
+                        <a href="certification-organic.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🌾</div>
+                        <h3 class="cert-title">Chứng nhận GAP</h3>
+                        <p class="cert-description">VietGAP, GlobalGAP, ASEAN GAP cho nông nghiệp, thủy sản</p>
+                        <a href="certification-gap.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🏭</div>
+                        <h3 class="cert-title">Chứng nhận GMP</h3>
+                        <p class="cert-description">Thực hành sản xuất tốt cho thực phẩm, dược phẩm, mỹ phẩm</p>
+                        <a href="certification-gmp.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🕌</div>
+                        <h3 class="cert-title">Chứng nhận Halal</h3>
+                        <p class="cert-description">Chứng nhận Halal cho thực phẩm, mỹ phẩm, dược phẩm</p>
+                        <a href="certification-halal.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🌍</div>
+                        <h3 class="cert-title">Chứng nhận Bền vững</h3>
+                        <p class="cert-description">Rainforest Alliance, UTZ, Fair Trade, Carbon Footprint</p>
+                        <a href="certification-sustainability.html" class="btn-detail">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="content-section">
+                <div class="benefits">
+                    <h2 class="section-title">Lợi ích khi chứng nhận với SCI Tech</h2>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">⚡</div>
+                            <h4>Tiết kiệm thời gian</h4>
+                            <p>Quy trình tối ưu, hỗ trợ từ A-Z, rút ngắn thời gian chứng nhận</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💰</div>
+                            <h4>Chi phí hợp lý</h4>
+                            <p>Báo giá minh bạch, không phát sinh chi phí ẩn</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">👨‍💼</div>
+                            <h4>Chuyên gia giàu kinh nghiệm</h4>
+                            <p>Đội ngũ auditor được đào tạo bài bản, kinh nghiệm thực tế</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🌐</div>
+                            <h4>Công nhận quốc tế</h4>
+                            <p>Chứng nhận được công nhận rộng rãi trên thế giới</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📞</div>
+                            <h4>Hỗ trợ 24/7</h4>
+                            <p>Tư vấn và hỗ trợ khách hàng mọi lúc, mọi nơi</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🔄</div>
+                            <h4>Dịch vụ hậu mãi</h4>
+                            <p>Hỗ trợ duy trì và tái chứng nhận định kỳ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process -->
+            <div class="content-section">
+                <h2 class="section-subtitle">Quy trình chứng nhận chuyên nghiệp</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4 class="step-title">Tư vấn & Đánh giá</h4>
+                        <p class="step-description">Tư vấn lựa chọn tiêu chuẩn phù hợp và đánh giá hiện trạng doanh nghiệp</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4 class="step-title">Lập kế hoạch</h4>
+                        <p class="step-description">Xây dựng kế hoạch triển khai chi tiết và lộ trình thực hiện</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4 class="step-title">Hỗ trợ triển khai</h4>
+                        <p class="step-description">Hướng dẫn xây dựng hệ thống quản lý và chuẩn bị tài liệu</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4 class="step-title">Kiểm toán nội bộ</h4>
+                        <p class="step-description">Thực hiện kiểm toán nội bộ và khắc phục các vấn đề còn tồn tại</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4 class="step-title">Kiểm toán chứng nhận</h4>
+                        <p class="step-description">Tổ chức kiểm toán chính thức bởi tổ chức chứng nhận uy tín</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h4 class="step-title">Cấp chứng nhận</h4>
+                        <p class="step-description">Nhận chứng nhận và hỗ trợ duy trì hệ thống quản lý</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="content-section">
+                <div class="faq-section">
+                    <h2 class="section-subtitle">Câu hỏi thường gặp</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">Thời gian để có được chứng nhận là bao lâu?</button>
+                        <div class="faq-answer">
+                            <p>Thời gian chứng nhận phụ thuộc vào nhiều yếu tố:</p>
+                            <ul>
+                                <li>Quy mô và độ phức tạp của tổ chức</li>
+                                <li>Mức độ sẵn sàng của hệ thống quản lý hiện tại</li>
+                                <li>Loại tiêu chuẩn cần chứng nhận</li>
+                            </ul>
+                            <p>Thông thường:</p>
+                            <ul>
+                                <li>ISO 9001, 14001: 3-6 tháng</li>
+                                <li>HACCP, GMP: 2-4 tháng</li>
+                                <li>Organic: 6-12 tháng (bao gồm thời gian chuyển đổi)</li>
+                                <li>GlobalGAP: 4-8 tháng</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Chi phí chứng nhận được tính như thế nào?</button>
+                        <div class="faq-answer">
+                            <p>Chi phí chứng nhận bao gồm:</p>
+                            <ul>
+                                <li><strong>Phí tư vấn:</strong> Phụ thuộc vào quy mô và độ phức tạp</li>
+                                <li><strong>Phí kiểm toán:</strong> Dựa trên số ngày kiểm toán cần thiết</li>
+                                <li><strong>Phí cấp chứng nhận:</strong> Phí của tổ chức chứng nhận</li>
+                                <li><strong>Phí giám sát:</strong> Kiểm toán giám sát hàng năm</li>
+                            </ul>
+                            <p>Chúng tôi cung cấp báo giá chi tiết và minh bạch cho từng dự án.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Chứng nhận có giá trị trong bao lâu?</button>
+                        <div class="faq-answer">
+                            <p>Thời hạn hiệu lực của chứng nhận:</p>
+                            <ul>
+                                <li><strong>ISO (9001, 14001, 22000...):</strong> 3 năm với kiểm toán giám sát hàng năm</li>
+                                <li><strong>HACCP:</strong> 3 năm với kiểm toán giám sát 6 tháng/lần</li>
+                                <li><strong>Organic:</strong> 1 năm, cần gia hạn hàng năm</li>
+                                <li><strong>GlobalGAP:</strong> 1 năm, cần gia hạn hàng năm</li>
+                                <li><strong>Halal:</strong> 2 năm với kiểm toán giám sát hàng năm</li>
+                            </ul>
+                            <p>Chúng tôi sẽ nhắc nhở và hỗ trợ khách hàng gia hạn chứng nhận đúng hạn.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Doanh nghiệp cần chuẩn bị gì trước khi chứng nhận?</button>
+                        <div class="faq-answer">
+                            <p>Chuẩn bị cần thiết:</p>
+                            <ul>
+                                <li><strong>Cam kết của lãnh đạo:</strong> Sự ủng hộ và tham gia tích cực</li>
+                                <li><strong>Nhân sự:</strong> Chỉ định người phụ trách dự án</li>
+                                <li><strong>Tài liệu:</strong> Hồ sơ pháp lý, giấy phép kinh doanh</li>
+                                <li><strong>Cơ sở vật chất:</strong> Đảm bảo đáp ứng yêu cầu cơ bản</li>
+                                <li><strong>Quy trình:</strong> Có các quy trình vận hành cơ bản</li>
+                            </ul>
+                            <p>Chúng tôi sẽ hỗ trợ đánh giá và tư vấn chi tiết về những gì cần chuẩn bị.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Nếu không đạt chứng nhận ở lần đầu thì sao?</button>
+                        <div class="faq-answer">
+                            <p>Trong trường hợp không đạt:</p>
+                            <ul>
+                                <li>Auditor sẽ cung cấp báo cáo chi tiết về các vấn đề cần khắc phục</li>
+                                <li>Chúng tôi hỗ trợ xây dựng kế hoạch khắc phục</li>
+                                <li>Tổ chức kiểm toán bổ sung sau khi khắc phục xong</li>
+                                <li>Không tính thêm phí tư vấn khắc phục</li>
+                                <li>Chỉ tính phí kiểm toán bổ sung (thường chỉ 1-2 ngày)</li>
+                            </ul>
+                            <p>Tỷ lệ thành công của khách hàng với SCI Tech là trên 95% ngay lần đầu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Sẵn sàng đạt chứng nhận?</h2>
+            <p class="cta-description">Liên hệ ngay để nhận tư vấn miễn phí và báo giá chi tiết cho nhu cầu chứng nhận của doanh nghiệp bạn</p>
+            <a href="contact.html" class="btn">Tư vấn miễn phí</a>
+            <a href="tel:0931004818" class="btn btn-outline">Gọi: 0931.004.818</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SCI Tech Vietnam</h3>
+                    <p>Công ty hàng đầu về dịch vụ kiểm nghiệm, chứng nhận và giám định tại Việt Nam.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>📞 0931.004.818</p>
+                    <p>✉️ info@sci-techvn.com</p>
+                    <p>📍 Lô II-1, Đường số 1, Nhóm CN2, KCN Tân Bình, P.Tây Thạnh, Q.Tân Phú, TP.HCM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Dịch vụ</h3>
+                    <p><a href="testing-services.html">Dịch vụ Kiểm nghiệm</a></p>
+                    <p><a href="certification-services.html">Dịch vụ Chứng nhận</a></p>
+                    <p><a href="inspection-services.html">Dịch vụ Kiểm tra</a></p>
+                    <p><a href="compliance-services.html">Chứng nhận Hợp chuẩn</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">YouTube</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SCI Tech Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
